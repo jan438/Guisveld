@@ -57,6 +57,9 @@ def fillKamerReport(count):
     d.add(String(10, 430, 'Hello World', fontSize = 18, fillColor = colors.red))
     d.add(String(10, 325, 'Hello World', fontSize = 18, fillColor = colors.red))
     d.add(String(10, 220, 'Hello World', fontSize = 18, fillColor = colors.red))
+    
+    for i in range(len(kamers)):
+        print(kamers[i].bewoner)
 
     d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
     d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
@@ -84,8 +87,6 @@ for i in range(len(kamerdata)):
     zijde = kamerdata[i][2]
     bewoner = kamerdata[i][3]
     kamers.append(Kamer(nummer, pad, zijde, bewoner))
-for i in range(len(kamers)):
-    print(kamers[i].bewoner)
 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
