@@ -19,6 +19,7 @@ from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
 
 kamerdata = []
+kamers = []
 d = Drawing(595, 842)
 
 class Kamer:
@@ -73,7 +74,7 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Guisveld"
 os.chdir(path)
-kamers = []
+
 file_to_open = "Data/Kamers.csv"
 processcsv(file_to_open)
 print(len(kamerdata))
