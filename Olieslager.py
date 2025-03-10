@@ -69,11 +69,17 @@ d.add(String(10, 535, 'Hello World', fontSize = 18, fillColor = colors.red))
 d.add(String(10, 430, 'Hello World', fontSize = 18, fillColor = colors.red))
 d.add(String(10, 325, 'Hello World', fontSize = 18, fillColor = colors.red))
 d.add(String(10, 220, 'Hello World', fontSize = 18, fillColor = colors.red))
-d.add(String(10, 115, 'Hello World', fontSize = 18, fillColor = colors.red))
+
+d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
+d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
+d.add(String(100, 115, 'Kingma', fontSize = 15, fillColor = colors.red))
+d.add(Image(path = "Foto/dick.png", width = 75, height = 95, x = 12, y = 112.5))
+
 d.add(String(100, 50, '265', fontSize = 20, fillColor = colors.blue))
 d.add(String(100, 25, 'Joop', fontSize = 15, fillColor = colors.red))
 d.add(String(100, 10, 'Mooijboer', fontSize = 15, fillColor = colors.red))
 d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = 12, y = 7.5))
+
 renderPDF.drawToFile(d, 'PDF/olieslager.pdf')
 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
