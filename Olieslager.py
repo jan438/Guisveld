@@ -19,6 +19,7 @@ from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
 
 kamerdata = []
+d = Drawing(595, 842)
 
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner):
@@ -35,6 +36,37 @@ def processcsv(csvfile):
             if count > 0:
                 kamerdata.append(row)
             count += 1
+            
+def processreport():
+    renderPDF.drawToFile(d, 'PDF/olieslager.pdf') 
+            
+def fillKamerReport(count):
+    print("fillKamerReport", count)
+    d.add(Rect(5, 740, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 635, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 530, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 425, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 320, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 215, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 110, 200, 100, fillColor = colors.yellow))
+    d.add(Rect(5, 5, 200, 100, fillColor = colors.yellow))
+    d.add(String(10, 745, 'Hello World', fontSize = 18, fillColor = colors.red))
+    d.add(String(10, 640, 'Hello World', fontSize = 18, fillColor = colors.red))
+    d.add(String(10, 535, 'Hello World', fontSize = 18, fillColor = colors.red))
+    d.add(String(10, 430, 'Hello World', fontSize = 18, fillColor = colors.red))
+    d.add(String(10, 325, 'Hello World', fontSize = 18, fillColor = colors.red))
+    d.add(String(10, 220, 'Hello World', fontSize = 18, fillColor = colors.red))
+
+    d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
+    d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
+    d.add(String(100, 115, 'Kingma', fontSize = 15, fillColor = colors.red))
+    d.add(Image(path = "Foto/dick.png", width = 75, height = 95, x = 12, y = 112.5))
+
+    d.add(String(100, 50, '265', fontSize = 20, fillColor = colors.blue))
+    d.add(String(100, 25, 'Joop', fontSize = 15, fillColor = colors.red))
+    d.add(String(100, 10, 'Mooijboer', fontSize = 15, fillColor = colors.red))
+    d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = 12, y = 7.5))
+    return
 
 if sys.platform[0] == 'l':
     path = '/home/jan/git/Guisveld'
@@ -54,7 +86,6 @@ for i in range(len(kamerdata)):
 for i in range(len(kamers)):
     print(kamers[i].bewoner)
     
-d = Drawing(595, 842)
 d.add(Rect(5, 740, 200, 100, fillColor = colors.yellow))
 d.add(Rect(5, 635, 200, 100, fillColor = colors.yellow))
 d.add(Rect(5, 530, 200, 100, fillColor = colors.yellow))
@@ -80,8 +111,6 @@ d.add(String(100, 25, 'Joop', fontSize = 15, fillColor = colors.red))
 d.add(String(100, 10, 'Mooijboer', fontSize = 15, fillColor = colors.red))
 d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = 12, y = 7.5))
 
-renderPDF.drawToFile(d, 'PDF/olieslager.pdf')
-
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuItalic', 'Ubuntu-Italic.ttf'))
@@ -90,4 +119,6 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
+fillKamerReport(len(kamers))
+processreport()
 key = input("Wait")
