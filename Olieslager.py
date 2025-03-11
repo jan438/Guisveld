@@ -59,10 +59,11 @@ def fillKamerReport(count):
     for i in range(len(kamers)):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)      
     for i in range(len(kamers)):
-        d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
-        d.add(String(100, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 15, fillColor = colors.red))
-        d.add(String(100, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 15, fillColor = colors.red))
-        d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + (i * rectheight)))
+        if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
+            d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
+            d.add(String(100, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 15, fillColor = colors.red))
+            d.add(String(100, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 15, fillColor = colors.red))
+            d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + (i * rectheight)))
     return
 
 if sys.platform[0] == 'l':
