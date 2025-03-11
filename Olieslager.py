@@ -69,7 +69,7 @@ def fillKamerReport(count):
     d.add(String(300, bottommargin + 5 + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(300 + middlehormargin + rectwidth, bottommargin + 5 + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + 2.5 + middlehormargin + rectwidth, bottommargin + 5 + (7 * rectheight), "Hazenpad", fontSize = 20, fillColor = colors.purple))
-    d.add(String(400 + middlehormargin + rectwidth, bottommargin + 5 + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
+    d.add(String(300 + middlehormargin + rectwidth, bottommargin + 5 + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
     for i in range(len(kamers)):
         if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
             d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
