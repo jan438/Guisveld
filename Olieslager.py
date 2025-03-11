@@ -32,7 +32,7 @@ leftmargin =  2.5
 middlehormargin = 2.5
 bottommargin = 5
 middlehor = 5
-middlever = 8
+topmargin = 8
 
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
@@ -68,12 +68,12 @@ def fillKamerReport(count):
         d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehor + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
     for i in range(len(kamers)):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
-    d.add(String(leftmargin, bottommargin + middlever + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + middlehormargin + rectwidth, bottommargin + middlever + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin+2*rectwidth+middlehormargin + middlehor, bottommargin + middlever + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehor + rectwidth, bottommargin + middlever + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + 2.5 + middlehormargin + rectwidth, bottommargin + middlever + (7 * rectheight), "Hazenpad", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + 3*rectwidth + 2*middlehormargin + middlehor, bottommargin + middlever + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin, bottommargin + topmargin + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + middlehormargin + rectwidth, bottommargin + topmargin + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin+2*rectwidth+middlehormargin + middlehor, bottommargin + topmargin + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehor + rectwidth, bottommargin + topmargin + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + 2.5 + middlehormargin + rectwidth, bottommargin + topmargin + (7 * rectheight), "Hazenpad", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + 3*rectwidth + 2*middlehormargin + middlehor, bottommargin + topmargin + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
     for i in range(len(kamers)):
         if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
             d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
