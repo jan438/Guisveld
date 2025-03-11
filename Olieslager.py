@@ -22,11 +22,10 @@ kamerdata = []
 kamers = []
 d = Drawing(595, 842)
 
-#rectwidth = 250
+rectwidth = 190
 rectheight = 100
 leftmargin =  15
 middlehormargin = 15
-#topmargin = 10
 bottommargin = 5
 
 class Kamer:
@@ -51,27 +50,11 @@ def processreport():
 def fillKamerReport(count):
     print("fillKamerReport", count)
     for i in range(8):
-        d.add(Rect(leftmargin, bottommargin + (i * rectheight), 190, rectheight, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 740, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 635, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 530, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 425, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 320, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 215, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.5, 110, 190, 100, fillColor = colors.yellow))
-    #d.add(Rect(7.55, 5, 190, 100, fillColor = colors.yellow))
+        d.add(Rect(leftmargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
     
-    #d.add(String(10, 745, 'Hello World', fontSize = 18, fillColor = colors.red))
-    
-    d.add(Rect(397.5, 740, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 635, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 530, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 425, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 320, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 215, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 110, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(397.5, 5, 190, 100, fillColor = colors.yellow))
-    
+    for i in range(8):
+        d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
+   
     for i in range(len(kamers)):
         print(kamers[i].bewoner)
 
