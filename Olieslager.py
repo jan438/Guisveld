@@ -65,8 +65,8 @@ def fillKamerReport(count):
         d.add(String(leftmargin + middlehormargin + rectwidth, bottommargin + 5 + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
         if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
             d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
-            d.add(String(100, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 15, fillColor = colors.red))
-            d.add(String(100, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 15, fillColor = colors.red))
+            d.add(String(90, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
+            d.add(String(90, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
             d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + (i * rectheight)))
     return
 
