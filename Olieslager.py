@@ -58,6 +58,10 @@ def fillKamerReport(count):
         d.add(Rect(leftmargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
     for i in range(8):
         d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
+    for i in range(8):
+        d.add(Rect(300, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
+    for i in range(8):
+        d.add(Rect(300 + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
     for i in range(len(kamers)):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)      
     for i in range(len(kamers)):
