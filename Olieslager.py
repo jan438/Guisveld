@@ -22,10 +22,12 @@ kamerdata = []
 kamers = []
 d = Drawing(595, 842)
 
-rectwidth = 190
+#2,5+145+2,5+145+5+145+2,5+145+2,5 = 595
+
+rectwidth = 145
 rectheight = 100
-leftmargin =  15
-middlehormargin = 15
+leftmargin =  2.5
+middlehormargin = 2.5
 bottommargin = 5
 
 class Kamer:
