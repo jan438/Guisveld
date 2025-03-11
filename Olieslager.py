@@ -22,6 +22,13 @@ kamerdata = []
 kamers = []
 d = Drawing(595, 842)
 
+#rectwidth = 250
+rectheight = 100
+leftmargin =  15
+middlehormargin = 15
+#topmargin = 10
+bottommargin = 5
+
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner):
         self.nummer = nummer
@@ -43,20 +50,18 @@ def processreport():
             
 def fillKamerReport(count):
     print("fillKamerReport", count)
-    d.add(Rect(7.5, 740, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 635, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 530, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 425, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 320, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 215, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.5, 110, 190, 100, fillColor = colors.yellow))
-    d.add(Rect(7.55, 5, 190, 100, fillColor = colors.yellow))
-    d.add(String(10, 745, 'Hello World', fontSize = 18, fillColor = colors.red))
-    d.add(String(10, 640, 'Hello World', fontSize = 18, fillColor = colors.red))
-    d.add(String(10, 535, 'Hello World', fontSize = 18, fillColor = colors.red))
-    d.add(String(10, 430, 'Hello World', fontSize = 18, fillColor = colors.red))
-    d.add(String(10, 325, 'Hello World', fontSize = 18, fillColor = colors.red))
-    d.add(String(10, 220, 'Hello World', fontSize = 18, fillColor = colors.red))
+    for i in range(8):
+        d.add(Rect(leftmargin, bottommargin + (i * rectheight), 190, rectheight, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 740, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 635, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 530, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 425, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 320, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 215, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.5, 110, 190, 100, fillColor = colors.yellow))
+    #d.add(Rect(7.55, 5, 190, 100, fillColor = colors.yellow))
+    
+    #d.add(String(10, 745, 'Hello World', fontSize = 18, fillColor = colors.red))
     
     d.add(Rect(397.5, 740, 190, 100, fillColor = colors.yellow))
     d.add(Rect(397.5, 635, 190, 100, fillColor = colors.yellow))
