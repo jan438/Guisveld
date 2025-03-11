@@ -29,12 +29,13 @@ middlehormargin = 15
 bottommargin = 5
 
 class Kamer:
-    def __init__(self, nummer, pad, zijde, bewoner, initialen):
+    def __init__(self, nummer, pad, zijde, bewoner, initialen, naam):
         self.nummer = nummer
         self.pad = pad
         self.zijde = zijde
         self.bewoner = bewoner
         self.initialen = initialen
+        self.naam = naam
 
 def processcsv(csvfile):
     with open(file_to_open, 'r') as file:
@@ -57,7 +58,7 @@ def fillKamerReport(count):
         d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
    
     for i in range(len(kamers)):
-        print(kamers[i].bewoner, kamers[i].initialen)
+        print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam)
 
     d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
     d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
@@ -85,7 +86,8 @@ for i in range(len(kamerdata)):
     zijde = kamerdata[i][2]
     bewoner = kamerdata[i][3]
     initialen = kamerdata[i][4]
-    kamers.append(Kamer(nummer, pad, zijde, bewoner, initialen))
+    naam = kamerdata[i][5]
+    kamers.append(Kamer(nummer, pad, zijde, bewoner, initialen, naam))
 
 pdfmetrics.registerFont(TTFont('Ubuntu', 'Ubuntu-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('UbuntuBold', 'Ubuntu-Bold.ttf'))
