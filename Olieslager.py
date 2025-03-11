@@ -61,12 +61,12 @@ def fillKamerReport(count):
     d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
     d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
     d.add(String(100, 115, 'Kingma', fontSize = 15, fillColor = colors.red))
-    d.add(Image(path = "Foto/dick.png", width = 75, height = 95, x = 12, y = 112.5))
+    d.add(Image(path = "Foto/dick.png", width = 75, height = 95, x = leftmargin + 5, y = 112.5))
 
     d.add(String(100, 50, '265', fontSize = 20, fillColor = colors.blue))
     d.add(String(100, 25, 'Joop', fontSize = 15, fillColor = colors.red))
     d.add(String(100, 10, 'Mooijboer', fontSize = 15, fillColor = colors.red))
-    d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = 12, y = 7.5))
+    d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = leftmargin + 5, y = 7.5))
     return
 
 if sys.platform[0] == 'l':
