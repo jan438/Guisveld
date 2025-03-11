@@ -60,16 +60,13 @@ def fillKamerReport(count):
    
     for i in range(len(kamers)):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
+        
+    for i in range(len(kamers)):
+        d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
+        d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
+        d.add(String(100, 115, 'Kingma', fontSize = 15, fillColor = colors.red))
+        d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + rectheight))
 
-    d.add(String(100, 155, '259', fontSize = 20, fillColor = colors.blue))
-    d.add(String(100, 130, 'Dick', fontSize = 15, fillColor = colors.red))
-    d.add(String(100, 115, 'Kingma', fontSize = 15, fillColor = colors.red))
-    d.add(Image(path = "Foto/dick.png", width = 75, height = 95, x = leftmargin + 5, y = 7.5 + rectheight))
-
-    d.add(String(100, 50, '265', fontSize = 20, fillColor = colors.blue))
-    d.add(String(100, 25, 'Joop', fontSize = 15, fillColor = colors.red))
-    d.add(String(100, 10, 'Mooijboer', fontSize = 15, fillColor = colors.red))
-    d.add(Image(path = "Foto/joop.png", width = 75, height = 95, x = leftmargin + 5, y = 7.5))
     return
 
 if sys.platform[0] == 'l':
