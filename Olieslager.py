@@ -54,19 +54,15 @@ def fillKamerReport(count):
     print("fillKamerReport", count)
     for i in range(8):
         d.add(Rect(leftmargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
-    
     for i in range(8):
         d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
-   
     for i in range(len(kamers)):
-        print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
-        
+        print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)      
     for i in range(len(kamers)):
-        d.add(String(100, bottommargin + 20 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
-        d.add(String(100, bottommargin + 10 + (i * rectheight), kamers[i].initialen, fontSize = 15, fillColor = colors.red))
-        d.add(String(100, bottommargin + (i * rectheight), kamers[i].naam, fontSize = 15, fillColor = colors.red))
-        d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + rectheight))
-
+        d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
+        d.add(String(100, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 15, fillColor = colors.red))
+        d.add(String(100, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 15, fillColor = colors.red))
+        d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 5, y = 7.5 + (i * rectheight)))
     return
 
 if sys.platform[0] == 'l':
