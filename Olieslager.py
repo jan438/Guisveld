@@ -34,6 +34,10 @@ bottommargin = 5
 middlehorseparator = 5
 topmargin = 8 + (8 * rectheight)
 
+roomposition = [[] for _ in range(300)]
+roomposition[278] = [12, 14]
+roomposition[279] = [11, 13]
+
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
         self.nummer = nummer
@@ -75,6 +79,7 @@ def fillKamerReport(count):
     d.add(String(leftmargin + 2.5 + middlehormargin + 0.8*rectwidth, bottommargin + topmargin, "Hazenpad", fontSize = 25, fillColor = colors.blue))
     d.add(String(leftmargin + 2.45*rectwidth + 2*middlehormargin + middlehorseparator, bottommargin + topmargin, "Boerenpad", fontSize = 25, fillColor = colors.blue))
     for i in range(len(kamers)):
+        print(roomposition[278])
         if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
             d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             d.add(String(82.5, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
