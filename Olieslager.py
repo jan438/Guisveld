@@ -70,8 +70,8 @@ def fillKamerReport(count):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
     d.add(String(leftmargin, bottommargin + topmargin + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + middlehormargin + rectwidth, bottommargin + topmargin + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin+2*rectwidth+middlehormargin + middlehorseparator, bottommargin + topmargin + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehorseparator + rectwidth, bottommargin + topmargin + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin+2*rectwidth+middlehormargin + middlehorseparator, bottommargin + topmargin + (8 * rectheight), "Tuinzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehorseparator + rectwidth, bottommargin + topmargin + (8 * rectheight), "Wegzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + 2.5 + middlehormargin + rectwidth, bottommargin + topmargin + (7 * rectheight), "Hazenpad", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + 2.5 + 3*rectwidth + 2*middlehormargin + middlehorseparator, bottommargin + topmargin + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
     for i in range(len(kamers)):
