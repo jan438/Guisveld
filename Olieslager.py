@@ -42,8 +42,8 @@ class Kamer:
         
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
-    roomposition[278] = [12, 14]
-    roomposition[279] = [11, 13]
+    roomposition[258] = [12, 14]
+    roomposition[259] = [11, 13]
     return roomposition[int(number)]
 
 def processcsv(csvfile):
