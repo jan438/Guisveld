@@ -70,7 +70,7 @@ def fillKamerReport(count):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
     d.add(String(leftmargin, bottommargin + topmargin, "Wegzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + middlehormargin + 1.75*rectwidth, bottommargin + topmargin, "Tuinzijde", fontSize = 20, fillColor = colors.purple))
-    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehorseparator + rectwidth, bottommargin + topmargin, "Wegzijde", fontSize = 20, fillColor = colors.purple))
+    d.add(String(leftmargin + 2*rectwidth + 2*middlehormargin + middlehorseparator + 1.45*rectwidth, bottommargin + topmargin, "Wegzijde", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + 2.5 + middlehormargin + rectwidth, bottommargin + 8 + (7 * rectheight), "Hazenpad", fontSize = 20, fillColor = colors.purple))
     d.add(String(leftmargin + 2.5 + 3*rectwidth + 2*middlehormargin + middlehorseparator, bottommargin + 8 + (7 * rectheight), "Boerenpad", fontSize = 20, fillColor = colors.purple))
     for i in range(len(kamers)):
