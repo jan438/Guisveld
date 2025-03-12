@@ -63,10 +63,10 @@ def fillKamerReport(count):
     for i in range(7):
         d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#DAEEC9"))
     for i in range(7):
-        d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
+        d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 1.5*rectwidth + middlehormargin, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
     for i in range(8):
-        d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
+        d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     for i in range(len(kamers)):
         print(kamers[i].bewoner, kamers[i].initialen, kamers[i].naam, kamers[i].foto)
     d.add(String(leftmargin, bottommargin + topmargin, "Wegzijde", fontSize = 20, fillColor = colors.purple))
