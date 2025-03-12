@@ -60,9 +60,9 @@ def fillKamerReport(count):
     print("fillKamerReport", count)
     for i in range(8):
         d.add(Rect(leftmargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
-    for i in range(8):
+    for i in range(7):
         d.add(Rect(leftmargin + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
-    for i in range(8):
+    for i in range(7):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
     for i in range(8):
         d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = colors.yellow))
