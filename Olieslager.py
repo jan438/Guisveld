@@ -30,7 +30,7 @@ bottommargin = 5
 middlehorseparator = 5
 topmargin = 8 + (8 * rectheight)
 roompos = [0, 0]
-nummeroffset = [100, 100]
+nummeroffset = [100, 50]
 
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
