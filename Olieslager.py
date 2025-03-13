@@ -91,7 +91,7 @@ def fillKamerReport(count):
             d.add(String(roompos[0], roompos[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             d.add(String(roompos[0] - 17.5, roompos[1] - 25, kamers[i].initialen, fontSize = 10, fillColor = colors.red))
             d.add(String(roompos[0] - 17.5, roompos[1] - 40, kamers[i].naam, fontSize = 10, fillColor = colors.red))
-            d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = roompos[0] - 17.5, y = roompos[1] - 40))
+            d.add(Image(path = "Foto/" + kamers[i].foto, width = 90, height = 95, x = roompos[0] - 150, y = roompos[1] - 60))
     return
 
 if sys.platform[0] == 'l':
