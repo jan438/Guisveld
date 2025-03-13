@@ -44,7 +44,7 @@ class Kamer:
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
     roomposition[258] = [12, 14]
-    roomposition[259] = [11, 13]
+    roomposition[259] = [100, 13]
     roomposition[260] = [16, 15]
     return roomposition[int(number)]
 
@@ -87,8 +87,8 @@ def fillKamerReport(count):
             d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
             d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
         if kamers[i].pad == "Middelpunt":
-            print(roompos)
-            #d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
+            print("Middelpunt", roompos[0], roompos[1])
+            d.add(String(roompos[0], roompos[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             #d.add(String(82.5, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
             #d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
             #d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
