@@ -31,7 +31,8 @@ middlehorseparator = 5
 topmargin = 8 + (8 * rectheight)
 roompos = [0, 0]
 nummeroffset = [100, 50]
-initialenoffset = [95, 40]
+initialenoffset = [95, 35]
+naamoffset = [95, 25]
 
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
@@ -92,7 +93,7 @@ def fillKamerReport(count):
             print("Middelpunt", roompos[0], roompos[1], "nummeroffset", nummeroffset[0], nummeroffset[1])
             d.add(String(roompos[0] + nummeroffset[0], roompos[1] + nummeroffset[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             d.add(String(roompos[0] + initialenoffset[0], roompos[1] + initialenoffset[1], kamers[i].initialen, fontSize = 10, fillColor = colors.red))
-            #d.add(String(roompos[0] - 17.5, roompos[1] - 40, kamers[i].naam, fontSize = 10, fillColor = colors.red))
+            d.add(String(roompos[0] + naamoffset[0], roompos[1] + naamoffset[1], kamers[i].naam, fontSize = 10, fillColor = colors.red))
             d.add(Image(path = "Foto/" + kamers[i].foto, width = 90, height = 95, x = roompos[0], y = roompos[1]))
     return
 
