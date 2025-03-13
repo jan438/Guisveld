@@ -45,7 +45,7 @@ class Kamer:
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
     roomposition[258] = [12, 14]
-    roomposition[259] = [350, 600]
+    roomposition[259] = [300, 700]
     roomposition[260] = [16, 15]
     return roomposition[int(number)]
 
