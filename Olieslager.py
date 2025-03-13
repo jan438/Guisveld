@@ -29,6 +29,7 @@ middlehormargin = 2.5
 bottommargin = 5
 middlehorseparator = 5
 topmargin = 8 + (8 * rectheight)
+roompos = [0, 0]
 
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
@@ -79,12 +80,18 @@ def fillKamerReport(count):
     d.add(String(leftmargin + 2.45*rectwidth + 2*middlehormargin + middlehorseparator, bottommargin + topmargin, "Boerenpad", fontSize = 25, fillColor = colors.blue))
     d.add(String(leftmargin + rectwidth + 4*middlehormargin + middlehorseparator, bottommargin + topmargin - 50, "Middelpunt", fontSize = 25, fillColor = colors.blue))
     for i in range(len(kamers)):
-        print(lookuproomposition(kamers[i].nummer))
+        roompos = lookuproomposition(kamers[i].nummer)
         if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
             d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             d.add(String(82.5, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
             d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
             d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
+        if kamers[i].pad == "Middelpunt":
+            print(roompos)
+            #d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
+            #d.add(String(82.5, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
+            #d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
+            #d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
     return
 
 if sys.platform[0] == 'l':
