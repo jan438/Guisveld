@@ -46,10 +46,12 @@ class Kamer:
         
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
+    # 244     x = 200  y = 600
     # 260     x = 450  y = 708
     # 267     x = 450  y = 8
     # 268     x = 305  y = 8
     # 274     x = 305  y = 608
+    roomposition[244] = [200, 608]
     roomposition[259] = [300, 708]
     roomposition[260] = [450, 708]
     roomposition[267] = [450, 8]
@@ -90,16 +92,10 @@ def fillKamerReport(count):
     d.add(String(leftmargin + rectwidth + 4*middlehormargin + middlehorseparator, bottommargin + topmargin - 50, "Middelpunt", fontSize = 25, fillColor = colors.blue))
     for i in range(len(kamers)):
         roompos = lookuproomposition(kamers[i].nummer)
-        if kamers[i].pad == "Hazenpadpad" and kamers[i].zijde == "Wegzijde":
-            d.add(String(100, bottommargin + 50 + (i * rectheight), kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
-            d.add(String(82.5, bottommargin + 25 + (i * rectheight), kamers[i].initialen, fontSize = 10, fillColor = colors.red))
-            d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
-            d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
-        if kamers[i].pad == "Middelpunt" or kamers[i].pad == "Boerenpad":
-            d.add(String(roompos[0] + nummeroffset[0], roompos[1] + nummeroffset[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
-            d.add(String(roompos[0] + initialenoffset[0], roompos[1] + initialenoffset[1], kamers[i].initialen, fontSize = 10, fillColor = colors.red))
-            d.add(String(roompos[0] + naamoffset[0], roompos[1] + naamoffset[1], kamers[i].naam, fontSize = 10, fillColor = colors.red))
-            d.add(Image(path = "Foto/" + kamers[i].foto, width = 90, height = 95, x = roompos[0], y = roompos[1]))
+        d.add(String(roompos[0] + nummeroffset[0], roompos[1] + nummeroffset[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
+        d.add(String(roompos[0] + initialenoffset[0], roompos[1] + initialenoffset[1], kamers[i].initialen, fontSize = 10, fillColor = colors.red))
+        d.add(String(roompos[0] + naamoffset[0], roompos[1] + naamoffset[1], kamers[i].naam, fontSize = 10, fillColor = colors.red))
+        d.add(Image(path = "Foto/" + kamers[i].foto, width = 90, height = 95, x = roompos[0], y = roompos[1]))
     return
 
 if sys.platform[0] == 'l':
