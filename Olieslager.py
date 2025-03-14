@@ -54,6 +54,7 @@ def lookuproomposition(number):
     roomposition[260] = [450, 708]
     roomposition[267] = [450, 8]
     roomposition[268] = [305, 8]
+    roomposition[274] = [305, 608]
     return roomposition[int(number)]
 
 def processcsv(csvfile):
