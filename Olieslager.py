@@ -96,7 +96,6 @@ def fillKamerReport(count):
             d.add(String(82.5, bottommargin + 10 + (i * rectheight), kamers[i].naam, fontSize = 10, fillColor = colors.red))
             d.add(Image(path = "Foto/" + kamers[i].foto, width = 75, height = 95, x = leftmargin + 2.5, y = 7.5 + (i * rectheight)))
         if kamers[i].pad == "Middelpunt" or kamers[i].pad == "Boerenpad":
-            print("Middelpunt", roompos[0], roompos[1], "nummeroffset", nummeroffset[0], nummeroffset[1])
             d.add(String(roompos[0] + nummeroffset[0], roompos[1] + nummeroffset[1], kamers[i].nummer, fontSize = 20, fillColor = colors.blue))
             d.add(String(roompos[0] + initialenoffset[0], roompos[1] + initialenoffset[1], kamers[i].initialen, fontSize = 10, fillColor = colors.red))
             d.add(String(roompos[0] + naamoffset[0], roompos[1] + naamoffset[1], kamers[i].naam, fontSize = 10, fillColor = colors.red))
