@@ -48,12 +48,14 @@ def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
     # 244     x = 155  y = 600
     # 250     x = 155  y = 8
+    # 251     x = 7.5  y = 8
     # 260     x = 450  y = 708
     # 267     x = 450  y = 8
     # 268     x = 305  y = 8
     # 274     x = 305  y = 608
     roomposition[244] = [155, 608]
     roomposition[250] = [155, 8]
+    roomposition[251] = [7.5, 8]
     roomposition[259] = [300, 708]
     roomposition[260] = [450, 708]
     roomposition[267] = [450, 8]
