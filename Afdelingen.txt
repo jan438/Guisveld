@@ -2,5 +2,6 @@ Hazenpad                15   244 245 246 247 248 249 250 - 251 252 253 254 255 2
 Boerenpad aan mijn kant 15   260 261 262 263 264 265 266 267 - 268 269 270 271 272 273 274 kamers
 Ringkamer 1 259
 
-Anneke Bos 244
-Harry Pool 256
+Manuel Damsteeg  260
+Anneke Bos       244
+Harry Pool       256
