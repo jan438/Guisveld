@@ -54,6 +54,7 @@ def lookuproomposition(number):
     # 249     x = 155  y = 100
     # 250     x = 155  y = 8
     # 251     x = 7.5  y = 8
+    # 252     x = 7.5  y = 108
     # 254     x = 7.5  y = 308
     # 255     x = 7.5  y = 408
     # 256     x = 7.5  y = 508
@@ -72,6 +73,7 @@ def lookuproomposition(number):
     roomposition[249] = [155, 208]
     roomposition[250] = [155, 108]
     roomposition[251] = [7.5, 8]
+    roomposition[252] = [7.5, 108]
     roomposition[254] = [7.5, 308]
     roomposition[255] = [7.5, 408]
     roomposition[256] = [7.5, 508]
