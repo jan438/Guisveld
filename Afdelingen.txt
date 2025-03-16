@@ -2,13 +2,16 @@ Hazenpad                15   244 245 246 247 248 249 250 - 251 252 253 254 255 2
 Boerenpad aan mijn kant 15   260 261 262 263 264 265 266 267 - 268 269 270 271 272 273 274 kamers
 Ringkamer 1 259
 
-Anneke Bos       244
-Tini Vermeulen   246
-Arend Kuijt      254
-Willy Moeneclaey 255
-Harry Pool       256
-Manuel Damsteeg  260
-Lex Geernaert    263
-Jan de Jong      268
-Herman Degenhart 269
+Anneke Bos          244
+Tini Vermeulen      246
+Anne Verkoijen      252
+Arend Kuijt         254
+Willy Moeneclaey    255
+Harry Pool          256
+Jony                258
+Manuel Damsteeg     260
+Lex Geernaert       263
+Geurtje Bosschieter 267
+Jan de Jong         268
+Herman Degenhart    269
 
