@@ -47,6 +47,7 @@ class Kamer:
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
     # 244     x = 155  y = 600
+    # 245     x = 155  y = 500
     # 246     x = 155  y = 400
     # 250     x = 155  y = 8
     # 251     x = 7.5  y = 8
@@ -61,6 +62,7 @@ def lookuproomposition(number):
     # 269     x = 305  y = 108
     # 274     x = 305  y = 608
     roomposition[244] = [155, 608]
+    roomposition[245] = [155, 508]
     roomposition[246] = [155, 408]
     roomposition[250] = [155, 8]
     roomposition[251] = [7.5, 8]
