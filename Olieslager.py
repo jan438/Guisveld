@@ -72,7 +72,7 @@ def lookuproomposition(number):
     roomposition[246] = [155, 408]
     roomposition[247] = [155, 308]
     roomposition[248] = [155, 208]
-    roomposition[249] = [155, 208]
+    roomposition[249] = [155, 108]
     roomposition[250] = [155, 8]
     roomposition[251] = [7.5, 8]
     roomposition[252] = [7.5, 108]
