@@ -60,21 +60,6 @@ def lookuproomposition(number):
     # 256     x = 7.5  y = 508
     # 257     x = 7.5  y = 608
     # 258     x = 7.5  y = 708
-    # 260     x = 450  y = 708
-    # 261     x = 450  y = 608
-    # 262     x = 450  y = 508
-    # 263     x = 450  y = 408
-    # 264     x = 450  y = 308
-    # 265     x = 450  y = 208
-    # 266     x = 450  y = 108
-    # 267     x = 450  y = 8
-    # 268     x = 305  y = 8
-    # 269     x = 305  y = 108
-    # 270     x = 305  y = 208
-    # 271     x = 305  y = 308
-    # 272     x = 305  y = 408
-    # 273     x = 305  y = 508
-    # 274     x = 305  y = 608
     roomposition[244] = [155, 608]
     roomposition[245] = [155, 508]
     roomposition[246] = [155, 408]
@@ -90,6 +75,7 @@ def lookuproomposition(number):
     roomposition[257] = [7.5, 608]
     roomposition[258] = [7.5, 708]
     roomposition[259] = [300, 708]
+    # Boerenpad
     roomposition[260] = [450, 708]
     roomposition[261] = [450, 608]
     roomposition[262] = [450, 508]
