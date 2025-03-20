@@ -76,6 +76,7 @@ def lookuproomposition(number):
     roomposition[256] = [7.5, 508]
     roomposition[257] = [7.5, 608]
     roomposition[258] = [7.5, 708]
+    # Middelpunt
     roomposition[259] = [305, 708]
     # Boerenpad
     roomposition[260] = [450, 708]
