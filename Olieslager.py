@@ -46,21 +46,7 @@ class Kamer:
         
 def lookuproomposition(number):
     roomposition = [[] for _ in range(300)]
-    # 244     x = 155  y = 600
-    # 245     x = 155  y = 500
-    # 246     x = 155  y = 400
-    # 247     x = 155  y = 300
-    # 248     x = 155  y = 200
-    # 249     x = 155  y = 100
-    # 250     x = 155  y = 8
-    # 251     x = 7.5  y = 8
-    # 252     x = 7.5  y = 108
-    # 253     x = 7.5  y = 208
-    # 254     x = 7.5  y = 308
-    # 255     x = 7.5  y = 408
-    # 256     x = 7.5  y = 508
-    # 257     x = 7.5  y = 608
-    # 258     x = 7.5  y = 708
+    # Hazenpad
     roomposition[244] = [155, 608]
     roomposition[245] = [155, 508]
     roomposition[246] = [155, 408]
