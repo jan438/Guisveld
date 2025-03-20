@@ -117,7 +117,7 @@ def fillKamerReport(count):
     for i in range(7):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
-    img = Image(path = "Foto/N.png", width = 50, height = 50, x = 200, y = 710, rotate = 160.0)
+    img = Image(path = "Foto/N.png", width = 50, height = 50, x = 200, y = 710)
     d.add(img)
     for i in range(8):
         d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
