@@ -106,13 +106,8 @@ def fillKamerReport(count):
     for i in range(7):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
-    f = widgetbase.Face()
-    f.x = 190
-    f.y = 710
-    f.size = 30
-    d.add(f)
     a = signsandsymbols.ArrowOne()
-    a.x = 230
+    a.x = 200
     a.y = 710
     a.size = 30
     d.add(a)
