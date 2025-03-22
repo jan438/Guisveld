@@ -105,6 +105,10 @@ def fillKamerReport(count):
     for i in range(7):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
+    f = widgetbase.Face()
+    f.x = 200
+    f.y = 710
+    d.add(f)
     #img = Image(path = "Foto/NE.png", width = 50, height = 50, x = 200, y = 710)
     #d.add(img)
     for i in range(8):
