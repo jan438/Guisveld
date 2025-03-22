@@ -111,11 +111,11 @@ def fillKamerReport(count):
     f.y = 710
     f.size = 30
     d.add(f)
-    fd = signsandsymbols.FloppyDisk()
-    fd.x = 230
-    fd.y = 710
-    fd.size = 30
-    d.add(fd)
+    o = signsandsymbols.Octagon()
+    o.x = 230
+    o.y = 710
+    o.size = 30
+    d.add(o)
     #img = Image(path = "Foto/NE.png", width = 50, height = 50, x = 200, y = 710)
     #d.add(img)
     for i in range(8):
