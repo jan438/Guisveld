@@ -19,6 +19,7 @@ from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
 from reportlab.graphics import shapes
 from reportlab.graphics import widgetbase
+from reportlab.graphics.widgets import signsandsymbols
 
 kamerdata = []
 kamers = []
@@ -106,10 +107,15 @@ def fillKamerReport(count):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
     f = widgetbase.Face()
-    f.x = 200
+    f.x = 190
     f.y = 710
     f.size = 30
     d.add(f)
+    fd = signsandsymbols.FloppyDisk()
+    fd.x = 230
+    fd.y = 710
+    fd.size = 30
+    d.add(fd)
     #img = Image(path = "Foto/NE.png", width = 50, height = 50, x = 200, y = 710)
     #d.add(img)
     for i in range(8):
