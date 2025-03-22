@@ -17,6 +17,8 @@ from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER
 from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
+from reportlab.graphics import shapes
+from reportlab.graphics import widgetbase
 
 kamerdata = []
 kamers = []
