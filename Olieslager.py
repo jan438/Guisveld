@@ -19,6 +19,7 @@ from reportlab.graphics.shapes import *
 from reportlab.graphics import renderPDF
 from reportlab.graphics import shapes
 from reportlab.graphics import widgetbase
+from reportlab.graphics.widgetbase import Widget
 from reportlab.graphics.widgets import signsandsymbols
 
 kamerdata = []
@@ -37,6 +38,79 @@ nummeroffset = [85, 50]
 initialenoffset = [80, 35]
 naamoffset = [80, 25]
 
+class _Symbol(Widget):
+    """Abstract base widget
+    possible attributes:
+    'x', 'y', 'size', 'fillColor', 'strokeColor'
+    """
+    _nodoc = 1
+    _attrMap = AttrMap(
+        x = AttrMapValue(isNumber,desc='symbol x coordinate'),
+        y = AttrMapValue(isNumber,desc='symbol y coordinate'),
+        dx = AttrMapValue(isNumber,desc='symbol x coordinate adjustment'),
+        dy = AttrMapValue(isNumber,desc='symbol x coordinate adjustment'),
+        size = AttrMapValue(isNumber),
+        fillColor = AttrMapValue(isColorOrNone),
+        strokeColor = AttrMapValue(isColorOrNone),
+        strokeWidth = AttrMapValue(isNumber),
+        )
+    def __init__(self):
+        assert self.__class__.__name__!='_Symbol', 'Abstract class _Symbol instantiated'
+        self.x = self.y = self.dx = self.dy = 0
+        self.size = 100
+        self.fillColor = colors.red
+        self.strokeColor = None
+        self.strokeWidth = 0.1
+
+    def demo(self):
+        D = shapes.Drawing(200, 100)
+        s = float(self.size)
+        ob = self.__class__()
+        ob.x=50
+        ob.y=0
+        ob.draw()
+        D.add(ob)
+        D.add(shapes.String(ob.x+(s/2),(ob.y-12),
+                            ob.__class__.__name__, fillColor=colors.black, textAnchor='middle',
+                            fontSize=10))
+        return D
+        
+class MyArrow(_Symbol):
+    """This widget draws an arrow (style one).
+
+        possible attributes:
+        'x', 'y', 'size', 'fillColor'
+
+        """
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+        self.size = 100
+        self.fillColor = colors.red
+
+    def draw(self):
+        # general widget bits
+        s = float(self.size)  # abbreviate as we will use this a lot
+        g = shapes.Group()
+
+
+        # arrow specific bits
+        body = shapes.Rect(x=self.x, y=(self.y+(s/2))-(s/6), width=2*(s/3), height=(s/3),
+               fillColor = self.fillColor,
+               strokeColor = None,
+               strokeWidth=0)
+        g.add(body)
+
+        head = shapes.Polygon(points = [self.x+(3*(s/6)), (self.y+(s/2)),
+                                       self.x+(3*(s/6)), self.y+8*(s/10),
+                                       self.x+s, self.y+(s/2),
+                                       self.x+(3*(s/6)), self.y+2*(s/10)],
+               fillColor = self.fillColor,
+               strokeColor = None,
+               strokeWidth=0)
+        g.add(head)
+
+        return g
 class Kamer:
     def __init__(self, nummer, pad, zijde, bewoner, initialen, naam, foto):
         self.nummer = nummer
@@ -106,7 +180,7 @@ def fillKamerReport(count):
     for i in range(7):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
-    a = signsandsymbols.ArrowOne()
+    a = MyArrow()
     a.x = 200
     a.y = 710
     a.size = 30
