@@ -40,12 +40,6 @@ initialenoffset = [80, 35]
 naamoffset = [80, 25]
    
 class MyArrow(_Symbol):
-    """This widget draws an arrow (style one).
-
-        possible attributes:
-        'x', 'y', 'size', 'fillColor'
-
-        """
     def __init__(self):
         self.x = 0
         self.y = 0
