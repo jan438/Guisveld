@@ -49,7 +49,6 @@ class MyArrow(_Symbol):
     def draw(self):
         g = shapes.Group()
         arrow = shapes.Polygon(points = [
-        
         226.1, 722.1,
         211.2, 707.2,
         214.5, 703.1,
@@ -59,17 +58,6 @@ class MyArrow(_Symbol):
         203.8, 714.5,
         207.2, 711.2,
         222.1, 726.1
-        
-        #261.4, 221.1,
-        #112.0, 72.5,
-        #145.5, 31.0,
-        #72.7, 19.5,
-        #0, 0,
-        #19.5, 72.738,
-        #38.982, 145.5,
-        #72.5, 112.0,
-        #221.1, 261.4
-        
         ],
                fillColor = self.fillColor,
                strokeColor = None,
