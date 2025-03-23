@@ -51,6 +51,7 @@ class MyArrow(_Symbol):
         arrow = shapes.Polygon(points = [150.1, 764.3,
                                          258.7, 758.2,
                                          150.2, 712.2,
+                                         160.2, 732.2,
                                          142.7, 745.6],
                fillColor = self.fillColor,
                strokeColor = None,
