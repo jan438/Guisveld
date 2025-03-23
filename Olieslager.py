@@ -53,23 +53,16 @@ class MyArrow(_Symbol):
         self.fillColor = colors.red
 
     def draw(self):
-        # general widget bits
-        s = float(self.size)  # abbreviate as we will use this a lot
+        s = float(self.size)
         g = shapes.Group()
-        # arrow specific bits
-        body = shapes.Rect(x=self.x, y=(self.y+(s/2))-(s/6), width=2*(s/3), height=(s/3),
-               fillColor = self.fillColor,
-               strokeColor = None,
-               strokeWidth=0)
-        g.add(body)
-        head = shapes.Polygon(points = [self.x+(3*(s/6)), (self.y+(s/2)),
+        arrow = shapes.Polygon(points = [self.x+(3*(s/6)), (self.y+(s/2)),
                                        self.x+(3*(s/6)), self.y+8*(s/10),
                                        self.x+s, self.y+(s/2),
                                        self.x+(3*(s/6)), self.y+2*(s/10)],
                fillColor = self.fillColor,
                strokeColor = None,
                strokeWidth=0)
-        g.add(head)
+        g.add(arrow)
         return g
         
 class Kamer:
