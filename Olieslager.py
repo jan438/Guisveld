@@ -42,8 +42,8 @@ naamoffset = [80, 25]
    
 class MyArrow(_Symbol):
     def __init__(self):
-        self.x = 0
-        self.y = 0
+        self.x = 200
+        self.y = 710
         self.size = 100
         self.fillColor = colors.red
 
@@ -51,15 +51,15 @@ class MyArrow(_Symbol):
         g = shapes.Group()
         g.add(Circle(209, 730, 26, fillColor=colors.orange))
         arrow = shapes.Polygon(points = [
-        226.1, 714.0,
-        211.2, 728.9,
-        214.5, 733.0,
-        207.2, 734.2,
-        200.0, 736.1, # arrow point
-        201.9, 728.9,
-        203.8, 721.6,
-        207.2, 724.9,
-        222.1, 710.0 
+        self.x + 26.1, self.y + 4.0,
+        self.x + 11.2, self.y + 18.9,
+        self.x + 14.5, self.y + 23.0,
+        self.x + 7.2, self.y + 24.2,
+        self.x, self.y + 26.1, # arrow point
+        self.x + 1.9, self.y + 18.9,
+        self.x + 3.8, self.y + 11.6,
+        self.x + 7.2, self.y + 14.9,
+        self.x + 22.1, self.y 
         ],
                fillColor = self.fillColor,
                strokeColor = None,
