@@ -66,7 +66,7 @@ class MyArrow(_Symbol):
                strokeWidth=0)
         g.add(arrow)
         lab = Label()
-        lab.setOrigin(190,740)
+        lab.setOrigin(self.x - 10, self.y + 30)
         lab.boxAnchor = 'ne'
         lab.angle = 45
         lab.dx = 3
