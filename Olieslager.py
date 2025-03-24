@@ -135,9 +135,6 @@ def fillKamerReport(count):
         d.add(Rect(leftmargin+2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator, bottommargin + (7 * rectheight), rectwidth, rectheight, fillColor = "#FEDDB9"))
     a = MyArrow()
-    a.x = 200
-    a.y = 710
-    a.size = 30
     d.add(a)
     for i in range(8):
         d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
