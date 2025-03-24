@@ -49,6 +49,7 @@ class MyArrow(_Symbol):
 
     def draw(self):
         g = shapes.Group()
+        g.add(Circle(209, 730, 26, fillColor=colors.orange))
         arrow = shapes.Polygon(points = [
         226.1, 714.0,
         211.2, 728.9,
