@@ -53,7 +53,7 @@ class MyArrow(_Symbol):
         211.2, 728.9,
         214.5, 733.0,
         207.2, 734.2,
-        200.0, 736.1,
+        200.0, 736.1, # arrow point
         201.9, 728.9,
         203.8, 721.6,
         207.2, 724.9,
@@ -139,8 +139,6 @@ def fillKamerReport(count):
     a.y = 710
     a.size = 30
     d.add(a)
-    #img = Image(path = "Foto/NE.png", width = 50, height = 50, x = 200, y = 710)
-    #d.add(img)
     for i in range(8):
         d.add(Rect(leftmargin + 2*rectwidth + middlehormargin + middlehorseparator + rectwidth + middlehormargin, bottommargin + (i * rectheight), rectwidth, rectheight, fillColor = "#aaffff"))
     for i in range(len(kamers)):
