@@ -66,11 +66,9 @@ class MyArrow(_Symbol):
                strokeWidth=0)
         g.add(arrow)
         lab = Label()
-        lab.setOrigin(self.x - 10, self.y + 30)
+        lab.setOrigin(self.x - 7, self.y + 40)
         lab.boxAnchor = 'ne'
         lab.angle = 45
-        lab.dx = 3
-        lab.dy = 10
         lab.boxStrokeColor = colors.black
         lab.setText("N")
         g.add(lab)
