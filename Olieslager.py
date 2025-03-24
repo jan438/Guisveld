@@ -42,8 +42,8 @@ naamoffset = [80, 25]
    
 class MyArrow(_Symbol):
     def __init__(self):
-        self.x = 200
-        self.y = 710
+        self.x = 215
+        self.y = 712
         self.size = 100
         self.fillColor = colors.red
 
