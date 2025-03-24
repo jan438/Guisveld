@@ -22,6 +22,7 @@ from reportlab.graphics import widgetbase
 from reportlab.graphics.widgetbase import Widget
 from reportlab.graphics.widgets import signsandsymbols
 from reportlab.graphics.widgets.signsandsymbols import _Symbol
+from reportlab.graphics.charts.textlabels import Label
 
 kamerdata = []
 kamers = []
@@ -63,7 +64,15 @@ class MyArrow(_Symbol):
                strokeColor = None,
                strokeWidth=0)
         g.add(arrow)
-        g.add(String(190,740,"N", fontSize = 15, fillColor = colors.black))
+        lab = Label()
+        lab.setOrigin(190,740)
+        lab.boxAnchor = 'ne'
+        lab.angle = 45
+        lab.dx = 3
+        lab.dy = 10
+        lab.boxStrokeColor = colors.black
+        lab.setText("N")
+        g.add(lab)
         return g
         
 class Kamer:
