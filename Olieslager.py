@@ -63,6 +63,7 @@ class MyArrow(_Symbol):
                strokeColor = None,
                strokeWidth=0)
         g.add(arrow)
+        g.add(String(190,740,"N", fontSize = 15, fillColor = colors.black))
         return g
         
 class Kamer:
