@@ -914,8 +914,9 @@ def test():
                             fd.__class__.__name__, fillColor=colors.black, textAnchor='middle',
                             fontSize=labelFontSize))
 
-    renderPDF.drawToFile(D, 'signsandsymbols.pdf', 'signsandsymbols.py')
-    print 'wrote file: signsandsymbols.pdf'
+    renderPDF.drawToFile(D, 'PDF/signsandsymbols.pdf', 'signsandsymbols.py')
+    print('wrote file: signsandsymbols.pdf')
 
 if __name__=='__main__':
     test()
+    key = input("Wait")
