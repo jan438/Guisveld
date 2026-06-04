@@ -13,7 +13,7 @@ from reportlab.lib.colors import tan, black, green
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
-festivalfont = "LiberationSerif"
+cheatsheetfont = "LiberationSerif"
 templatedata = []
 
 def scaleSVG(svgfile, scaling_factor):
@@ -90,7 +90,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def star(c, title, aka, xcenter, ycenter, nvertices):
-    c.setFont(festivalfont, 10)
+    c.setFont(cheatsheetfont, 10)
     radius=cm/3.0
     c.drawCentredString(xcenter, ycenter+1.3*radius, title)
     c.drawCentredString(xcenter, ycenter-1.4*radius, aka)
@@ -108,7 +108,7 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
     c.drawPath(p)
     
 def hexagon(c, x, y, s):
-    c.setFont(festivalfont, 7)
+    c.setFont(cheatsheetfont, 7)
     c.drawCentredString(x, y, "Hexagon")
     p = c.beginPath()
     angle = 60
@@ -132,7 +132,7 @@ def hexagon(c, x, y, s):
     c.drawPath(p)
     
 def octagon1(c, x, y, s):
-    c.setFont(festivalfont, 7)
+    c.setFont(cheatsheetfont, 7)
     c.drawCentredString(x, y, "Octagon1")
     angle = 67.5
     p = c.beginPath()
@@ -170,7 +170,7 @@ def octagon1(c, x, y, s):
     c.drawPath(p)
     
 def octagon2(c, x, y, s):
-    c.setFont(festivalfont, 7)
+    c.setFont(cheatsheetfont, 7)
     c.drawCentredString(x, y, "Octagon2")
     angle = 45
     p = c.beginPath()
@@ -353,8 +353,8 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="CheatSheetAlbireo"):
         cadre(c, pagesize)
         titlefontsize_value = variable_dict["titlefontsize" + ps]
         titley_value = variable_dict["titley" + ps]
-        namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
-        c.setFont(festivalfont, titlefontsize_value)
+        namewidth = pdfmetrics.stringWidth(title, cheatsheetfont, titlefontsize_value)
+        c.setFont(cheatsheetfont, titlefontsize_value)
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(325, 444, 40, 40)
@@ -378,7 +378,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="CheatSheetAlbireo"):
         heart(c, 200, 350, 50, 50)
         c.showPage()
         c.save()
-        print(f"✅ PDF Festivals '{filename}' created successfully.")
+        print(f"✅ PDF CheatSheetAlbireo '{filename}' created successfully.")
     except Exception as e:
         print(f"❌ Error creating PDF: {e}")
         
