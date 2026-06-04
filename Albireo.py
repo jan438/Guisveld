@@ -342,12 +342,12 @@ def heart(c, x, y, width, height):
     c.drawPath(p)
     p.close()
     
-def create_CheatSheetAlbireo(filename, ps, pagesize, title="CheatSheetAlbireo"):
+def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
         width, height = pagesize
-        c.setFillColor(HexColor('#FECDE5'))
+        c.setFillColor(HexColor('#FFFFFF'))
         c.rect(0, 0, width, height, fill=1)
         c.setFillColor(HexColor('#000000'))
         cadre(c, pagesize)
