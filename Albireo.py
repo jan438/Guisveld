@@ -389,7 +389,7 @@ variable_dict = {}
 for i in range(len(templatedata)):
     variable_dict[templatedata[i][0]] = float(templatedata[i][1])
 
-create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A4.pdf", "A4", A4, title="A4 CheatSheetAlbireo")
-create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A3.pdf", "A3", A3, title="A3 CheatSheetAlbireo")
+create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A4.pdf", "A4", A4, title="A4 Cheat Sheet Albireo")
+create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A3.pdf", "A3", A3, title="A3 Cheat Sheet Albireo")
 
 key = input("Wait")
