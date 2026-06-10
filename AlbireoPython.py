@@ -45,6 +45,8 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 0.5), c, x + 20, y + 20)
     c.setFillColor(HexColor('#ff0000'))
     c.circle(x + 95, y + 95, 25, stroke=0, fill=1)
+    c.setFillColor(HexColor('#ffffff'))
+    c.circle(x + 15, y + 95, 5, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
     try:
