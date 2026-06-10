@@ -72,21 +72,19 @@ def make_svg(bezier_segments, width=300, height=300):
 """
     return svg
 
-
-# Example: 30-degree circular segment
 try:
     beziers = arc_to_beziers(
-        cx=150,      # center x
-        cy=150,      # center y
-        r=100,       # radius
-        start_deg=0, # start angle
-        end_deg=30   # end angle
+        cx=150,
+        cy=150,
+        r=100,
+        start_deg=-30,
+        end_deg=30
     )
 
     svg_output = make_svg(beziers)
 
     # Save to file
-    with open("SVG/arc_30deg.svg", "w") as f:
+    with open("SVG/arc_330_30deg.svg", "w") as f:
         f.write(svg_output)
 
     print(svg_output)
