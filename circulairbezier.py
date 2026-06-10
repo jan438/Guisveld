@@ -61,6 +61,17 @@ try:
     svg_output = make_svg(beziers)
     with open("SVG/arc_330_30deg.svg", "w") as f:
         f.write(svg_output)
+        
+    beziers = arc_to_beziers(
+        cx=150,
+        cy=150,
+        r=100,
+        start_deg=60,
+        end_deg=120
+    )
+    svg_output = make_svg(beziers)
+    with open("SVG/arc_60_120deg.svg", "w") as f:
+        f.write(svg_output)
 
 except Exception as e:
     print("Error:", e)
