@@ -358,7 +358,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(325, 444, 40, 40)
-        renderPDF.draw(scaleSVG("SVG/albireogen3.svg", 0.5), c, 20, 20)
+        renderPDF.draw(scaleSVG("SVG/albireogen3inkscape.svg", 0.5), c, 20, 20)
         renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 250, 200)
         c.showPage()
         c.save()
@@ -391,7 +391,7 @@ variable_dict = {}
 for i in range(len(templatedata)):
     variable_dict[templatedata[i][0]] = float(templatedata[i][1])
 
-create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A4.pdf", "A4", A4, title="A4 Cheat Sheet Albireo")
-create_CheatSheetAlbireo("PDF/CheatSheetAlbireo_A3.pdf", "A3", A3, title="A3 Cheat Sheet Albireo")
+create_CheatSheetAlbireo("PDF/CheatSheetAlbireoInkscape_A4.pdf", "A4", A4, title="A4 Cheat Sheet Albireo")
+create_CheatSheetAlbireo("PDF/CheatSheetAlbireoInkscape_A3.pdf", "A3", A3, title="A3 Cheat Sheet Albireo")
 
 key = input("Wait")
