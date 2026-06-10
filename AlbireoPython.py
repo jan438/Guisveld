@@ -62,7 +62,7 @@ def albireo(c, x, y):
     radius = 10
     p.moveTo(xcenter-radius, y+50+43)
     p.lineTo(xcenter+radius, y+50+43)
-    p.lineTo(xcenter, y+50+33)
+    p.lineTo(xcenter, y+50+53)
     c.setFillColor(HexColor('#ffffff'))
     c.drawPath(p, stroke=0, fill=1)
     
