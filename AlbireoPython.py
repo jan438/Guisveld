@@ -52,7 +52,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(325, 444, 40, 40)
-        renderPDF.draw(scaleSVG("SVG/albireogen3inkscape.svg", 0.5), c, 20, 20)
+        renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, 20, 20)
         renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 250, 200)
         c.showPage()
         c.save()
