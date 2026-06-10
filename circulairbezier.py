@@ -45,7 +45,7 @@ def make_svg(bezier_segments, width=300, height=300):
 
     svg = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">
-  <path d="{path_data}" stroke="black" fill="none" stroke-width="20"/>
+  <path d="{path_data}" stroke="black" fill="none" stroke-width="30"/>
 </svg>
 """
     return svg
@@ -55,8 +55,8 @@ try:
         cx=150,
         cy=150,
         r=100,
-        start_deg=-30,
-        end_deg=30
+        start_deg=-35,
+        end_deg=35
     )
     svg_output = make_svg(beziers)
     with open("SVG/arc_330_30deg.svg", "w") as f:
@@ -66,8 +66,8 @@ try:
         cx=150,
         cy=150,
         r=100,
-        start_deg=60,
-        end_deg=120
+        start_deg=55,
+        end_deg=125
     )
     svg_output = make_svg(beziers)
     with open("SVG/arc_60_120deg.svg", "w") as f:
@@ -77,8 +77,8 @@ try:
         cx=150,
         cy=150,
         r=100,
-        start_deg=150,
-        end_deg=210
+        start_deg=145,
+        end_deg=215
     )
     svg_output = make_svg(beziers)
     with open("SVG/arc_150_210deg.svg", "w") as f:
@@ -88,8 +88,8 @@ try:
         cx=150,
         cy=150,
         r=100,
-        start_deg=240,
-        end_deg=300
+        start_deg=235,
+        end_deg=305
     )
     svg_output = make_svg(beziers)
     with open("SVG/arc_240_300deg.svg", "w") as f:
