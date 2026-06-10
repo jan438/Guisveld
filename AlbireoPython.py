@@ -56,6 +56,8 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 0.5), c, 20, 20)
         renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, 20, 20)
         renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 0.5), c, 20, 20)
+        c.setFillColor(HexColor('#ff0000'))
+        c.circle(20, 20, 250, stroke=0, fill=1)
         renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 250, 200)
         c.showPage()
         c.save()
