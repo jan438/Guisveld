@@ -56,7 +56,6 @@ def albireo(c, x, y):
     p.lineTo(xcenter+radius, y+43)
     p.lineTo(xcenter, y + 33)
     c.setFillColor(HexColor('#ffffff'))
-    c.setFillColor(HexColor('#ff00ff'))
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
     xcenter = x + 90
@@ -65,7 +64,6 @@ def albireo(c, x, y):
     p.lineTo(xcenter+radius, y+50+43)
     p.lineTo(xcenter, y+50+33)
     c.setFillColor(HexColor('#ffffff'))
-    c.setFillColor(HexColor('#ff00ff'))
     c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
