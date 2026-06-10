@@ -67,7 +67,7 @@ def make_svg(bezier_segments, width=300, height=300):
 
     svg = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">
-  <path d="{path_data}" stroke="black" fill="none" stroke-width="2"/>
+  <path d="{path_data}" stroke="black" fill="none" stroke-width="20"/>
 </svg>
 """
     return svg
