@@ -80,7 +80,7 @@ try:
         cy=150,      # center y
         r=100,       # radius
         start_deg=0, # start angle
-        end_deg=180   # end angle
+        end_deg=30   # end angle
     )
 
     svg_output = make_svg(beziers)
