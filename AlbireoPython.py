@@ -49,6 +49,14 @@ def albireo(c, x, y):
     c.circle(x + 43, y + 95, 5, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.rect(x + 90, y + 95, 10, 10, stroke=0, fill=1)
+    p = c.beginPath()
+    xcenter = x
+    radius = 10
+    p.moveTo(xcenter-radius, y)
+    p.lineTo(xcenter+radius, y)
+    p.lineTo(xcenter, 0)
+    c.setFillColor(HexColor('#ffffff'))
+    c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
     try:
