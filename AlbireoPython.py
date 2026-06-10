@@ -46,7 +46,9 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ff0000'))
     c.circle(x + 95, y + 95, 25, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
-    c.circle(x + 15, y + 95, 5, stroke=0, fill=1)
+    c.circle(x + 40, y + 95, 5, stroke=0, fill=1)
+    c.setFillColor(HexColor('#ffffff'))
+    c.rect(x + 80, y + 95, 5, 5, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
     try:
