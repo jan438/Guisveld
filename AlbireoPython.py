@@ -37,6 +37,8 @@ def cadre(c, pagesize):
         c.line(0, i * dx, width, i * dx)
         
 def albireo(c, x, y):
+    c.setFillColor(HexColor('#c7c7c7'))
+    c.rect(150, 250, x + 40, y + 40, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 0.5), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 0.5), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, x + 20, y + 20)
@@ -59,7 +61,6 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.setFont(cheatsheetfont, titlefontsize_value)
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
-        c.rect(325, 444, 40, 40)
         albireo(c, 200, 200)
         renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 250, 200)
         c.showPage()
