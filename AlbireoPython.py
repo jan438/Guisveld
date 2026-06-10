@@ -36,6 +36,14 @@ def cadre(c, pagesize):
     for i in range(15):
         c.line(0, i * dx, width, i * dx)
         
+def albireo(c, x, y):
+    renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 0.5), c, x + 20, y + 20)
+    renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 0.5), c, x + 20, y + 20)
+    renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, x + 20, y + 20)
+    renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 0.5), c, x + 20, y + 20)
+    c.setFillColor(HexColor('#ff0000'))
+    c.circle(x + 95, y + 95, 25, stroke=0, fill=1)
+    
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
@@ -52,12 +60,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(325, 444, 40, 40)
-        renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 0.5), c, 20, 20)
-        renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 0.5), c, 20, 20)
-        renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, 20, 20)
-        renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 0.5), c, 20, 20)
-        c.setFillColor(HexColor('#ff0000'))
-        c.circle(95, 95, 25, stroke=0, fill=1)
+        albireo(c, 200, 200)
         renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 250, 200)
         c.showPage()
         c.save()
