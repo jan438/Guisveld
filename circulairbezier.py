@@ -95,6 +95,12 @@ try:
     svg_output = make_svg(beziers, strokecolor, strokewidth)
     with open("SVG/arc_240_300deg.svg", "w") as f:
         f.write(svg_output)
+        svg_output = make_svg(beziers, strokecolor, strokewidth)
+    strokecolor = "red"
+    strokewidth = "35"
+    svg_output = make_svg(beziers, strokecolor, strokewidth)
+    with open("SVG/arc_240_300degred.svg", "w") as f:
+        f.write(svg_output)
 
 except Exception as e:
     print("Error:", e)
