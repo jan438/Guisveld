@@ -37,6 +37,9 @@ def cadre(c, pagesize):
         c.line(0, i * dx, width, i * dx)
         
 def albireo(c, x, y):
+    alarmbutton_x = 105
+    alarmbutton_y = 105
+    alarmbutton_r = 35
     c.setFillColor(HexColor('#c7c7c7'))
     c.rect(150, 250, x + 40, y + 40, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, x + 20, y + 20)
@@ -48,7 +51,7 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, x + 20, y + 20)
     c.setFillColor(HexColor('#ff0000'))
-    c.circle(x + 95, y + 95, 25, stroke=0, fill=1)
+    c.circle(x + alarmbutton_x, y + alarmbutton_x, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.circle(x + 43, y + 95, 5, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
