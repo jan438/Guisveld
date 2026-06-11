@@ -40,6 +40,9 @@ def albireo(c, x, y):
     alarmbutton_x = 105
     alarmbutton_y = 105
     alarmbutton_r = 35
+    resetbutton_x = 50
+    resetbutton_y = 105
+    resetbutton_r = 10
     c.setFillColor(HexColor('#c7c7c7'))
     c.rect(150, 250, x + 40, y + 40, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, x + 20, y + 20)
@@ -53,7 +56,7 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ff0000'))
     c.circle(x + alarmbutton_x, y + alarmbutton_x, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
-    c.circle(x + 43, y + 95, 5, stroke=0, fill=1)
+    c.circle(x + resetbutton_x, y + resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.rect(x + 138, y + 90, 10, 10, stroke=0, fill=1)
     p = c.beginPath()
