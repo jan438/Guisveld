@@ -67,19 +67,17 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ffffff'))
     c.rect(x + triggerbutton_x, y + triggerbutton_y, 10, 10, stroke=0, fill=1)
     p = c.beginPath()
-    xcenter = x + updownbutton_x
     radius = 10
-    p.moveTo(xcenter-radius, y+43)
-    p.lineTo(xcenter+radius, y+43)
-    p.lineTo(xcenter, y + 33)
+    p.moveTo(middle_x-radius, y+43)
+    p.lineTo(middle_x+radius, y+43)
+    p.lineTo(middle_x, y + 33)
     c.setFillColor(HexColor('#ffffff'))
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
-    xcenter = x + updownbutton_x
     radius = 10
-    p.moveTo(xcenter-radius, y+updownbutton_y+43)
-    p.lineTo(xcenter+radius, y+updownbutton_y+43)
-    p.lineTo(xcenter, y+updownbutton_y+53)
+    p.moveTo(middle_x-radius, y+updownbutton_y+43)
+    p.lineTo(middle_x+radius, y+updownbutton_y+43)
+    p.lineTo(middle_x, y+updownbutton_y+53)
     c.setFillColor(HexColor('#ffffff'))
     c.drawPath(p, stroke=0, fill=1)
     
