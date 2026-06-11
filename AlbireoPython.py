@@ -46,6 +46,7 @@ def albireo(c, x, y):
     triggerbutton_x = x + 60
     triggerbutton_y = y + 70
     updownbutton_x = x + 60
+    updownbutton_y = y + 70
     c.setFillColor(HexColor('#c7c7c7'))
     c.rect(x, y, 330, 600, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, x + 20, y + 20)
@@ -73,9 +74,9 @@ def albireo(c, x, y):
     p = c.beginPath()
     xcenter = x + updownbutton_x
     radius = 10
-    p.moveTo(xcenter-radius, y+50+43)
-    p.lineTo(xcenter+radius, y+50+43)
-    p.lineTo(xcenter, y+50+53)
+    p.moveTo(xcenter-radius, y+updownbutton_y+43)
+    p.lineTo(xcenter+radius, y+updownbutton_y+43)
+    p.lineTo(xcenter, y+updownbutton_y+53)
     c.setFillColor(HexColor('#ffffff'))
     c.drawPath(p, stroke=0, fill=1)
     
