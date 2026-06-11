@@ -32,7 +32,7 @@ def arc_to_beziers(cx, cy, r, start_deg, end_deg):
         angle1 = angle2
     return beziers
 
-def make_svg(bezier_segments, color="black", width=300, height=300):
+def make_svg(bezier_segments, strokecolor="black", strokewidth="30", width=300, height=300):
     """
     Build an SVG string from cubic Bézier segments.
     """
@@ -45,7 +45,7 @@ def make_svg(bezier_segments, color="black", width=300, height=300):
 
     svg = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">
-  <path d="{path_data}" stroke="{color}" fill="none" stroke-width="30"/>
+  <path d="{path_data}" stroke="{strokecolor}" fill="none" stroke-width="{strokewidth}"/>
 </svg>
 """
     return svg
