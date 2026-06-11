@@ -39,6 +39,7 @@ def cadre(c, pagesize):
 def albireo(c, x, y):
     c.setFillColor(HexColor('#c7c7c7'))
     c.rect(150, 250, x + 40, y + 40, stroke=0, fill=1)
+    renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 0.5), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 0.5), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 0.5), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 0.5), c, x + 20, y + 20)
