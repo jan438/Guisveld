@@ -37,7 +37,7 @@ def cadre(c, pagesize):
         c.line(0, i * dx, width, i * dx)
         
 def albireo(c, x, y):
-    alarmbutton_y = y + 140
+    alarmbutton_y = y + 160
     alarmbutton_r = 35
     resetbutton_x = x + 10
     resetbutton_y = y + 70
