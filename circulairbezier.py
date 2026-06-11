@@ -60,6 +60,9 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_330_30deg.svg", "w") as f:
         f.write(svg_output)
+    svg_output = make_svg(beziers, "gray", "35")
+    with open("SVG/arc_330_30degouter.svg", "w") as f:
+        f.write(svg_output)
         
     beziers = arc_to_beziers(
         cx=150,
@@ -71,6 +74,9 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_60_120deg.svg", "w") as f:
         f.write(svg_output)
+    svg_output = make_svg(beziers, "gray", "35")
+    with open("SVG/arc_60_120degouter.svg", "w") as f:
+        f.write(svg_output)     
         
     beziers = arc_to_beziers(
         cx=150,
@@ -82,6 +88,9 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_150_210deg.svg", "w") as f:
         f.write(svg_output)
+    svg_output = make_svg(beziers, "gray", "35")
+    with open("SVG/arc_150_210degouter.svg", "w") as f:
+        f.write(svg_output)  
         
     beziers = arc_to_beziers(
         cx=150,
@@ -94,7 +103,7 @@ try:
     with open("SVG/arc_240_300deg.svg", "w") as f:
         f.write(svg_output)
     svg_output = make_svg(beziers, "gray", "35")
-    with open("SVG/arc_240_300degred.svg", "w") as f:
+    with open("SVG/arc_240_300degouter.svg", "w") as f:
         f.write(svg_output)
 
 except Exception as e:
