@@ -37,7 +37,6 @@ def cadre(c, pagesize):
         c.line(0, i * dx, width, i * dx)
         
 def albireo(c, x, y):
-    alarmbutton_x = x + 50
     alarmbutton_y = y = 70
     alarmbutton_r = 35
     resetbutton_x = x + 10
@@ -47,8 +46,10 @@ def albireo(c, x, y):
     triggerbutton_y = y + 70
     updownbutton_x = x + 60
     updownbutton_y = y + 70
+    albireo_width = 330
+    middle_x = x + albireo_width / 2
     c.setFillColor(HexColor('#c7c7c7'))
-    c.rect(x, y, 330, 600, stroke=0, fill=1)
+    c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c, x + 20, y + 20)
@@ -58,7 +59,7 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, x + 20, y + 20)
     c.setFillColor(HexColor('#ff0000'))
-    c.circle(x + alarmbutton_x, y + alarmbutton_x, alarmbutton_r, stroke=0, fill=1)
+    c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.circle(x + resetbutton_x, y + resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
