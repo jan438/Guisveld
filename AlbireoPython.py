@@ -44,7 +44,7 @@ def albireo(c, x, y):
     resetbutton_y = y + 70
     resetbutton_r = 10
     c.setFillColor(HexColor('#c7c7c7'))
-    c.rect(100, 250, x, y, stroke=0, fill=1)
+    c.rect(x, y, 200, 400, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, x + 20, y + 20)
     renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c, x + 20, y + 20)
