@@ -92,7 +92,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         albireo(c, 200, 200)
-        renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 350, 300)
+        renderPDF.draw(scaleSVG("SVG/mizar.svg", 0.5), c, 450, 400)
         c.showPage()
         c.save()
         print(f"✅ PDF CheatSheetAlbireo '{filename}' created successfully.")
