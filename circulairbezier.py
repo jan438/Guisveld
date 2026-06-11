@@ -93,7 +93,7 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_240_300deg.svg", "w") as f:
         f.write(svg_output)
-    svg_output = make_svg(beziers, "red", "35")
+    svg_output = make_svg(beziers, "gray", "35")
     with open("SVG/arc_240_300degred.svg", "w") as f:
         f.write(svg_output)
 
