@@ -60,7 +60,7 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_330_30deg.svg", "w") as f:
         f.write(svg_output)
-    svg_output = make_svg(beziers, "green", "35")
+    svg_output = make_svg(beziers, "green", "38")
     with open("SVG/arc_330_30degouter.svg", "w") as f:
         f.write(svg_output)
         
@@ -74,7 +74,7 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_60_120deg.svg", "w") as f:
         f.write(svg_output)
-    svg_output = make_svg(beziers, "gray", "35")
+    svg_output = make_svg(beziers, "gray", "38")
     with open("SVG/arc_60_120degouter.svg", "w") as f:
         f.write(svg_output)     
         
@@ -88,7 +88,7 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_150_210deg.svg", "w") as f:
         f.write(svg_output)
-    svg_output = make_svg(beziers, "gray", "35")
+    svg_output = make_svg(beziers, "gray", "38")
     with open("SVG/arc_150_210degouter.svg", "w") as f:
         f.write(svg_output)  
         
@@ -102,7 +102,7 @@ try:
     svg_output = make_svg(beziers, "black", "30")
     with open("SVG/arc_240_300deg.svg", "w") as f:
         f.write(svg_output)
-    svg_output = make_svg(beziers, "gray", "35")
+    svg_output = make_svg(beziers, "gray", "38")
     with open("SVG/arc_240_300degouter.svg", "w") as f:
         f.write(svg_output)
 
