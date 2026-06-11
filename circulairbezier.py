@@ -42,7 +42,6 @@ def make_svg(bezier_segments, strokecolor="black", strokewidth="30", width=300, 
     path_data = f"M {x0:.4f},{y0:.4f}"
     for (x1, y1, cx1, cy1, cx2, cy2, x2, y2) in bezier_segments:
         path_data += f" C {cx1:.4f},{cy1:.4f} {cx2:.4f},{cy2:.4f} {x2:.4f},{y2:.4f}"
-
     svg = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">
   <path d="{path_data}" stroke="{strokecolor}" fill="none" stroke-width="{strokewidth}"/>
