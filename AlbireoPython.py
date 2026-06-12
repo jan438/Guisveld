@@ -72,8 +72,7 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, beziers_x, beziers_y)
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
-    #c.setFillColor(HexColor('#ffffff'))
-    c.setFillColor(HexColor('#ff00ff'))
+    c.setFillColor(HexColor('#ffffff'))
     c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.rect(beziers_x + beziers_width - 60, resetbutton_y, 18, 18, stroke=0, fill=1)
     p = c.beginPath()
@@ -83,9 +82,9 @@ def albireo(c, x, y):
     p.lineTo(middle_x, y+53)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
-    p.moveTo(middle_x-radius, y+243)
-    p.lineTo(middle_x+radius, y+243)
-    p.lineTo(middle_x, y+263)
+    p.moveTo(middle_x-radius, y+253)
+    p.lineTo(middle_x+radius, y+253)
+    p.lineTo(middle_x, y+273)
     c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
