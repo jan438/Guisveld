@@ -98,7 +98,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
         width, height = pagesize
-        c.setFillColor(HexColor('#FFFFFF'))
+        c.setFillColor(HexColor('#afafaf'))
         c.rect(0, 0, width, height, fill=1)
         c.setFillColor(HexColor('#000000'))
         cadre(c, pagesize)
