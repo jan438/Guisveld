@@ -61,7 +61,8 @@ def albireo(c, x, y):
     albireo_width = 330
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
-    middle_beziers_x = x + 15
+    beziers_width = 330
+    middle_beziers_x = middle_x - 150
     middle_beziers_y = y + 15
     drawroundRect(c, x, y, albireo_width, 600, albireo_angle, "#EEEFEA")   
     #c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
