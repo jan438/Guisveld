@@ -53,7 +53,7 @@ def drawroundRect(c, x, y, w, h, a, color):
 def albireo(c, x, y):
     alarmbutton_y = y + 160
     alarmbutton_r = 35
-    resetbutton_y = y + 70
+    resetbutton_y = y + 200
     resetbutton_r = 10
     triggerbutton_y = y + 70
     updownbutton_x = x + 60
@@ -76,8 +76,9 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, beziers_x, beziers_y)
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
-    c.setFillColor(HexColor('#ffffff'))
-    c.circle(middle_x-30, y + resetbutton_y, resetbutton_r, stroke=0, fill=1)
+    #c.setFillColor(HexColor('#ffffff'))
+    c.setFillColor(HexColor('#ff00ff'))
+    c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.rect(middle_x+30, y + triggerbutton_y, 10, 10, stroke=0, fill=1)
     p = c.beginPath()
