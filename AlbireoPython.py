@@ -51,6 +51,8 @@ def drawroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
       
 def albireo(c, x, y):
+    speaker_y = y + 350
+    speaker_r = 65
     alarmbutton_y = y + 164
     alarmbutton_r = 35
     resetbutton_y = y + 170
@@ -61,7 +63,9 @@ def albireo(c, x, y):
     beziers_width = 300
     beziers_x = middle_x - 0.5 * beziers_width
     beziers_y = y + 15
-    drawroundRect(c, x, y, albireo_width, 600, albireo_angle, "#EEEFEA")   
+    drawroundRect(c, x, y, albireo_width, 600, albireo_angle, "#EEEFEA")
+    c.setFillColor(HexColor('#000000'))
+    c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c,beziers_x, beziers_y)
