@@ -62,18 +62,18 @@ def albireo(c, x, y):
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300
-    middle_beziers_x = middle_x - 0.5 * beziers_width
+    beziers_x = middle_x - 0.5 * beziers_width
     middle_beziers_y = y + 15
     drawroundRect(c, x, y, albireo_width, 600, albireo_angle, "#EEEFEA")   
     #c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
-    renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c,middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_150_210degouter.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c,beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_150_210degouter.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg", 1.0), c, beziers_x, middle_beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, beziers_x, middle_beziers_y)
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
