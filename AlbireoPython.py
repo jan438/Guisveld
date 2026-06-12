@@ -51,7 +51,7 @@ def drawroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
       
 def albireo(c, x, y):
-    speaker_y = y + 350
+    speaker_y = y + 380
     speaker_r = 65
     alarmbutton_y = y + 164
     alarmbutton_r = 35
