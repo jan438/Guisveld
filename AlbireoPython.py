@@ -77,7 +77,7 @@ def albireo(c, x, y):
     #c.setFillColor(HexColor('#ffffff'))
     c.setFillColor(HexColor('#ff00ff'))
     c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
-    c.rect(beziers_x + beziers_width - 50, resetbutton_y, 10, 10, stroke=0, fill=1)
+    c.rect(beziers_x + beziers_width - 60, resetbutton_y, 18, 18, stroke=0, fill=1)
     p = c.beginPath()
     radius = 10
     p.moveTo(middle_x-radius, y+43)
