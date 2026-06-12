@@ -36,6 +36,20 @@ def cadre(c, pagesize):
     for i in range(15):
         c.line(0, i * dx, width, i * dx)
         
+def drawroundRect(c, x, y, w, h, a, color):    
+    c.setFillColor(HexColor(color))
+    p = c.beginPath()
+    p.moveTo(x, y + 0.5 * a)
+    p.arcTo(x, y, x + a, y + a, startAng = 180, extent = 90)
+    p.lineTo(x + w, y)
+    p.arcTo(x + w, y, x + w + a, y + a, startAng = 270, extent = 90)
+    p.lineTo(x + w + a, y + h)
+    p.arcTo(x + w, y + h, x + w + a, y + h + a, startAng = 0, extent = 90)
+    p.lineTo(x + 0.5 * a, y + h + a)
+    p.arcTo(x, y + h, x + a, y + h + a, startAng = 90, extent = 90)
+    p.lineTo(x, y + 0.5 * a)
+    c.drawPath(p, stroke = 0, fill = 1)
+      
 def albireo(c, x, y):
     alarmbutton_y = y + 160
     alarmbutton_r = 35
@@ -49,7 +63,8 @@ def albireo(c, x, y):
     middle_beziers_x = x + 15
     middle_beziers_y = y + 15
     c.setFillColor(HexColor('#c7c7c7'))
-    c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
+    drawroundRect(c, x, y, albireo_width, 600, 20, "#c7c7c7")   
+    #c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c,middle_beziers_x, middle_beziers_y)
