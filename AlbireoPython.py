@@ -62,8 +62,7 @@ def albireo(c, x, y):
     middle_x = x + albireo_width / 2
     middle_beziers_x = x + 15
     middle_beziers_y = y + 15
-    c.setFillColor(HexColor('#c7c7c7'))
-    drawroundRect(c, x, y, albireo_width, 600, 20, "#c7c7c7")   
+    drawroundRect(c, x, y, albireo_width, 600, 20, "#EEEFEA")   
     #c.rect(x, y, albireo_width, 600, stroke=0, fill=1)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, middle_beziers_x, middle_beziers_y)
