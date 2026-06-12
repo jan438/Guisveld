@@ -55,8 +55,6 @@ def albireo(c, x, y):
     alarmbutton_r = 35
     resetbutton_y = y + 175
     resetbutton_r = 10
-    updownbutton_x = x + 60
-    updownbutton_y = y + 70
     albireo_width = 330
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
@@ -85,9 +83,9 @@ def albireo(c, x, y):
     p.lineTo(middle_x, y+53)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
-    p.moveTo(middle_x-radius, y+updownbutton_y+43)
-    p.lineTo(middle_x+radius, y+updownbutton_y+43)
-    p.lineTo(middle_x, y+updownbutton_y+53)
+    p.moveTo(middle_x-radius, y+143)
+    p.lineTo(middle_x+radius, y+143)
+    p.lineTo(middle_x, y+163)
     c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
