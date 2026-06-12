@@ -53,7 +53,7 @@ def drawroundRect(c, x, y, w, h, a, color):
 def albireo(c, x, y):
     alarmbutton_y = y + 160
     alarmbutton_r = 35
-    resetbutton_y = y + 175
+    resetbutton_y = y + 170
     resetbutton_r = 10
     albireo_width = 330
     albireo_angle = albireo_width / 10
@@ -75,7 +75,7 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ffffff'))
     c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#7eff9c'))
-    c.rect(beziers_x + beziers_width - 60, resetbutton_y, 18, 18, stroke=0, fill=1)
+    c.rect(beziers_x + beziers_width - 60, resetbutton_y - 10, 18, 18, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     p = c.beginPath()
     radius = 15
