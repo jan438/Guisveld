@@ -51,7 +51,7 @@ def drawroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
       
 def albireo(c, x, y):
-    alarmbutton_y = y + 160
+    alarmbutton_y = y + 164
     alarmbutton_r = 35
     resetbutton_y = y + 170
     resetbutton_r = 10
