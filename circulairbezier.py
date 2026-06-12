@@ -1,4 +1,7 @@
 import math
+import os
+import sys
+
 def arc_to_beziers(cx, cy, r, start_deg, end_deg):
     """
     Convert a circular arc to cubic Bézier segments.
@@ -48,6 +51,13 @@ def make_svg(bezier_segments, strokecolor, strokewidth, width=300, height=300):
 </svg>
 """
     return svg
+    
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Guisveld'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Guisveld"
+os.chdir(path)
+
 
 try:
     beziers = arc_to_beziers(
