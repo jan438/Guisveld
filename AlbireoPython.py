@@ -79,13 +79,12 @@ def albireo(c, x, y):
     c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.rect(beziers_x + beziers_width - 60, resetbutton_y, 18, 18, stroke=0, fill=1)
     p = c.beginPath()
-    radius = 10
-    p.moveTo(middle_x-radius, y+43)
-    p.lineTo(middle_x+radius, y+43)
-    p.lineTo(middle_x, y + 33)
+    radius = 15
+    p.moveTo(middle_x-radius, y+63)
+    p.lineTo(middle_x+radius, y+63)
+    p.lineTo(middle_x, y+53)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
-    radius = 10
     p.moveTo(middle_x-radius, y+updownbutton_y+43)
     p.lineTo(middle_x+radius, y+updownbutton_y+43)
     p.lineTo(middle_x, y+updownbutton_y+53)
