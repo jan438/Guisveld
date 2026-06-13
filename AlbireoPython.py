@@ -89,9 +89,9 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ffffff'))
     p = c.beginPath()
     radius = 9
-    p.moveTo(middle_x-radius, y+50)
-    p.lineTo(middle_x+radius, y+50)
-    p.lineTo(middle_x, y+40)
+    p.moveTo(middle_x-radius, y+53)
+    p.lineTo(middle_x+radius, y+53)
+    p.lineTo(middle_x, y+43)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
     p.moveTo(middle_x-radius, y+250)
