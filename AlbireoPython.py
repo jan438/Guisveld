@@ -91,7 +91,7 @@ def albireo(c, x, y):
     radius = 9
     p.moveTo(middle_x-radius, y+50)
     p.lineTo(middle_x+radius, y+50)
-    p.lineTo(middle_x, y+45)
+    p.lineTo(middle_x, y+40)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
     p.moveTo(middle_x-radius, y+250)
