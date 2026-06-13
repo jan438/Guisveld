@@ -56,7 +56,6 @@ def albireo(c, x, y):
     speaker_y = y + 380
     speaker_r = 65
     alarmbutton_r = 35
-    resetbutton_y = y + 170
     resetbutton_r = 10
     albireo_width = 130 * albireo_scale
     albireo_height = 190 * albireo_scale
@@ -84,9 +83,9 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
-    c.circle(middle_x - 0.5 * beziers_width + 20, resetbutton_y, resetbutton_r, stroke=0, fill=1)
+    c.circle(middle_x - 0.5 * beziers_width + 20, alarmbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#2B857B'))
-    c.rect(beziers_x + beziers_width - 60, resetbutton_y - 10, 18, 18, stroke=0, fill=1)
+    c.rect(beziers_x + beziers_width - 60, alarmbutton_y - 10, 18, 18, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     p = c.beginPath()
     radius = 12
