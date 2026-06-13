@@ -52,9 +52,9 @@ def drawroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
       
 def albireo(c, x, y):
+    bottom_margin = 8 
     speaker_y = y + 380
     speaker_r = 65
-    alarmbutton_y = y + 128
     alarmbutton_r = 35
     resetbutton_y = y + 170
     resetbutton_r = 10
@@ -64,8 +64,9 @@ def albireo(c, x, y):
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300 * beziers_scale
     beziers_x = middle_x - 0.5 * beziers_width
-    beziers_y = y + 8
+    beziers_y = y + bottom_margin
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
+    alarmbutton_y = y + bottom_margin + 0.5 * beziers_width
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
@@ -83,7 +84,7 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
-    c.circle(beziers_x + 50, resetbutton_y, resetbutton_r, stroke=0, fill=1)
+    c.circle(middle_x - 0.5 * beziers_width + 20, resetbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#2B857B'))
     c.rect(beziers_x + beziers_width - 60, resetbutton_y - 10, 18, 18, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
