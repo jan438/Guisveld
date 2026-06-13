@@ -53,8 +53,8 @@ def drawroundRect(c, x, y, w, h, a, color):
       
 def albireo(c, x, y):
     bottom_margin = 8 
-    speaker_y = y + 380
-    speaker_r = 65
+    speaker_y = y + 315
+    speaker_r = 60
     alarmbutton_r = 35
     resetbutton_r = 8
     albireo_width = 130 * albireo_scale
