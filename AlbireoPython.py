@@ -68,7 +68,7 @@ def albireo(c, x, y):
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.setFont(cheatsheetfont, 10)
-    c.drawString(middle_x, speaker_y+10, "Albireo")
+    c.drawString(middle_x, speaker_y+10, "Alβireo")
     c.drawString(middle_x, speaker_y-10, "gen3")
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, beziers_x, beziers_y)
