@@ -66,6 +66,7 @@ def albireo(c, x, y):
     beziers_y = y + bottom_margin
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     alarmbutton_y = y + bottom_margin + 0.5 * beziers_width
+    c.radialGradient(middle_x, speaker_y, speaker_r + 50, (red, yellow), extend=False)
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
