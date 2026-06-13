@@ -82,6 +82,7 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg",  beziers_scale), c, beziers_x, beziers_y)
     c.setFillColor(HexColor('#ff0000'))
+    c.radialGradient(middle_x, alarmbutton_y, alarmbutton_r + 15, (gray, white), extend=False)
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.circle(middle_x - 0.5 * beziers_width + 38, alarmbutton_y, resetbutton_r, stroke=0, fill=1)
