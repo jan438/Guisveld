@@ -64,7 +64,7 @@ def albireo(c, x, y):
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300 * beziers_scale
     beziers_x = middle_x - 0.5 * beziers_width
-    beziers_y = y + 15
+    beziers_y = y + 8
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
