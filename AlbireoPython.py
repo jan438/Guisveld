@@ -54,7 +54,7 @@ def drawroundRect(c, x, y, w, h, a, color):
 def albireo(c, x, y):
     speaker_y = y + 380
     speaker_r = 65
-    alarmbutton_y = y + 164
+    alarmbutton_y = y + 128
     alarmbutton_r = 35
     resetbutton_y = y + 170
     resetbutton_r = 10
