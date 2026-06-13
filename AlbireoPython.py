@@ -15,6 +15,7 @@ from math import pi, cos, sin, radians, sqrt
 cheatsheetfont = "LiberationSerif"
 templatedata = []
 albireo_scale = 2.0
+beziers_scale = 0.8
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -61,7 +62,7 @@ def albireo(c, x, y):
     albireo_height = 190 * albireo_scale
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
-    beziers_width = 300
+    beziers_width = 300 * beziers_scale
     beziers_x = middle_x - 0.5 * beziers_width
     beziers_y = y + 15
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
@@ -71,14 +72,14 @@ def albireo(c, x, y):
     c.setFont(cheatsheetfont, 10)
     c.drawString(middle_x, speaker_y+10, "Alβireo")
     c.drawString(middle_x, speaker_y-10, "gen3")
-    renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg", 1.0), c,beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_150_210degouter.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg", 1.0), c, beziers_x, beziers_y)
-    renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg", 1.0), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg",  beziers_scale), c,beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_60_120deg.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_150_210degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_150_210deg.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
+    renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg",  beziers_scale), c, beziers_x, beziers_y)
     c.setFillColor(HexColor('#ff0000'))
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
