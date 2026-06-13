@@ -8,7 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
-from reportlab.lib.colors import yellow, green, red, black, HexColor, tan
+from reportlab.lib.colors import yellow, green, red, black, gray, white, HexColor, tan
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
@@ -66,7 +66,7 @@ def albireo(c, x, y):
     beziers_y = y + bottom_margin
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     alarmbutton_y = y + bottom_margin + 0.5 * beziers_width
-    c.radialGradient(middle_x, speaker_y, speaker_r + 50, (red, yellow), extend=False)
+    c.radialGradient(middle_x, speaker_y, speaker_r + 25, (gray, white), extend=False)
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
