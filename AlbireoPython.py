@@ -95,9 +95,9 @@ def albireo(c, x, y):
     c.drawPath(p, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffff00'))
     p = c.beginPath()
-    p.moveTo(middle_x-radius, y+240)
-    p.lineTo(middle_x+radius, y+240)
-    p.lineTo(middle_x, y+250)
+    p.moveTo(middle_x-radius, y+210)
+    p.lineTo(middle_x+radius, y+210)
+    p.lineTo(middle_x, y+220)
     c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
