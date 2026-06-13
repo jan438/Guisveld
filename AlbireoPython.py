@@ -94,9 +94,9 @@ def albireo(c, x, y):
     p.lineTo(middle_x, y+43)
     c.drawPath(p, stroke=0, fill=1)
     p = c.beginPath()
-    p.moveTo(middle_x-radius, y+205)
-    p.lineTo(middle_x+radius, y+205)
-    p.lineTo(middle_x, y+215)
+    p.moveTo(middle_x-radius, y+202)
+    p.lineTo(middle_x+radius, y+202)
+    p.lineTo(middle_x, y+212)
     c.drawPath(p, stroke=0, fill=1)
     
 def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"):
