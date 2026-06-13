@@ -8,8 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
-from reportlab.lib.colors import yellow, green, red, black, HexColor
-from reportlab.lib.colors import tan, black, green
+from reportlab.lib.colors import yellow, green, red, black, HexColor, tan
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
