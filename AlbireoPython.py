@@ -14,6 +14,7 @@ from math import pi, cos, sin, radians, sqrt
 
 cheatsheetfont = "LiberationSerif"
 templatedata = []
+albireo_scale = 2.0
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -56,8 +57,8 @@ def albireo(c, x, y):
     alarmbutton_r = 35
     resetbutton_y = y + 170
     resetbutton_r = 10
-    albireo_width = 330     # 130
-    albireo_height = 600    # 190
+    albireo_width = 130 * albireo_scale
+    albireo_height = 190 * albireo_scale
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300
