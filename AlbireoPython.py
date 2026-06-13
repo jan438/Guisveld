@@ -56,13 +56,14 @@ def albireo(c, x, y):
     alarmbutton_r = 35
     resetbutton_y = y + 170
     resetbutton_r = 10
-    albireo_width = 330
+    albireo_width = 330     # 130
+    albireo_height = 600    # 190
     albireo_angle = albireo_width / 10
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300
     beziers_x = middle_x - 0.5 * beziers_width
     beziers_y = y + 15
-    drawroundRect(c, x, y, albireo_width, 600, albireo_angle, "#EEEFEA")
+    drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
