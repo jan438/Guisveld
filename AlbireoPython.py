@@ -59,7 +59,7 @@ def albireo(c, x, y):
     resetbutton_r = 8
     albireo_width = 130 * albireo_scale
     albireo_height = 190 * albireo_scale
-    albireo_angle = albireo_width / 10
+    albireo_angle = albireo_width / 3
     middle_x = x + (albireo_width + albireo_angle) / 2
     beziers_width = 300 * beziers_scale
     beziers_x = middle_x - 0.5 * beziers_width
