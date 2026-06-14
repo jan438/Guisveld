@@ -72,7 +72,7 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ffffff'))
     c.setFont(cheatsheetfont, 20)
     strwidth = pdfmetrics.stringWidth("Alβireo", cheatsheetfont, 12)
-    c.drawString(middle_x - 0.5 * strwidth, speaker_y+10, "Alβireo")
+    c.drawString(middle_x - 0.55 * strwidth, speaker_y+10, "Alβireo")
     c.drawString(middle_x, speaker_y-10, "gen3")
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg",  beziers_scale), c, beziers_x, beziers_y)
