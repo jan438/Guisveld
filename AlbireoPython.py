@@ -53,7 +53,7 @@ def drawroundRect(c, x, y, w, h, a, color):
       
 def albireo(c, x, y):
     bottom_margin = 8 
-    speaker_y = y + 315
+    speaker_y = y + 340
     speaker_r = 60
     alarmbutton_r = 35
     resetbutton_r = 8
@@ -72,9 +72,9 @@ def albireo(c, x, y):
     c.setFillColor(HexColor('#ffffff'))
     c.setFont(cheatsheetfont, 20)
     strwidth = pdfmetrics.stringWidth("Alβireo", cheatsheetfont, 20)
-    c.drawString(middle_x - 0.5 * strwidth, speaker_y+10, "Alβireo")
+    c.drawString(middle_x - 0.5 * strwidth, speaker_y + 12.5, "Alβireo")
     strwidth = pdfmetrics.stringWidth("GEN3", cheatsheetfont, 20)
-    c.drawString(middle_x - 0.5 * strwidth, speaker_y-10, "GEN3")
+    c.drawString(middle_x - 0.5 * strwidth, speaker_y - 12.5, "GEN3")
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_330_30deg.svg",  beziers_scale), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_60_120degouter.svg",  beziers_scale), c,beziers_x, beziers_y)
