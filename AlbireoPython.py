@@ -91,7 +91,7 @@ def albireo(c, x, y):
     strwidth = pdfmetrics.stringWidth("ALARM", cheatsheetfont, 15)
     c.drawString(middle_x - 0.5 * strwidth, alarmbutton_y - 7.5, "ALARM")
     c.setFillColor(HexColor('#ffffff'))
-    c.circle(middle_x - 0.5 * beziers_width + 38, alarmbutton_y, resetbutton_r, stroke=0, fill=1)
+    c.circle(middle_x - 0.5 * beziers_width + 40, alarmbutton_y, resetbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#2B857B'))
     c.rect(beziers_x + beziers_width - 48, alarmbutton_y - 10, 15, 15, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
