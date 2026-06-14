@@ -56,7 +56,7 @@ def albireo(c, x, y):
     speaker_y = y + 340
     speaker_r = 60
     alarmbutton_r = 35
-    resetbutton_r = 8
+    resetbutton_r = 7
     albireo_width = 130 * albireo_scale
     albireo_height = 190 * albireo_scale
     albireo_angle = albireo_width / 3
