@@ -66,7 +66,7 @@ def albireo(c, x, y):
     beziers_y = y + bottom_margin
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     alarmbutton_y = y + bottom_margin + 0.5 * beziers_width
-    c.radialGradient(middle_x, speaker_y, speaker_r + 25, ("#EEEFEA", "#cfcfcf"), extend=False)
+    c.radialGradient(middle_x, speaker_y, speaker_r + 25, ("#EEEFEA", "#e5e5e5"), extend=False)
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
@@ -86,7 +86,7 @@ def albireo(c, x, y):
     renderPDF.draw(scaleSVG("SVG/arc_240_300degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
     renderPDF.draw(scaleSVG("SVG/arc_240_300deg.svg",  beziers_scale), c, beziers_x, beziers_y)
     c.setFillColor(HexColor('#ff0000'))
-    c.radialGradient(middle_x, alarmbutton_y, alarmbutton_r + 15, ("#EEEFEA", "#cfcfcf"), extend=False)
+    c.radialGradient(middle_x, alarmbutton_y, alarmbutton_r + 15, ("#EEEFEA", "#e5e5e5"), extend=False)
     c.circle(middle_x, alarmbutton_y, alarmbutton_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.setFont(cheatsheetfont, 15)
