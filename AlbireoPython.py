@@ -12,7 +12,7 @@ from reportlab.lib.colors import yellow, green, red, black, gray, white, HexColo
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
-cheatsheetfont = "LiberationSerif"
+cheatsheetfont = "ArialBold"
 templatedata = []
 albireo_scale = 2.0
 beziers_scale = 0.8
@@ -136,12 +136,14 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Guisveld"
 os.chdir(path)
-
+pdfmetrics.registerFont(TTFont('Arial', 'Arial.ttf'))
+pdfmetrics.registerFont(TTFont('ArialBold', 'Arial_Bold.ttf'))
+pdfmetrics.registerFont(TTFont('ArialItalic', 'Arial_Italic.ttf'))
+pdfmetrics.registerFont(TTFont('ArialBoldItalic', 'Arial_Bold_Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
-
 file_to_open = "Data/template.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
