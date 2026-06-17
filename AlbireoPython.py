@@ -66,14 +66,15 @@ def albireo(c, x, y):
     beziers_y = y + bottom_margin
     drawroundRect(c, x, y, albireo_width, albireo_height, albireo_angle, "#EEEFEA")
     alarmbutton_y = y + bottom_margin + 0.5 * beziers_width
-    c.radialGradient(middle_x, speaker_y, speaker_r + 25, (gray, white), extend=False)
+    c.radialGradient(middle_x, speaker_y, speaker_r + 25, (gray, "#EEEFEA"), extend=False)
     c.setFillColor(HexColor('#000000'))
     c.circle(middle_x, speaker_y, speaker_r, stroke=0, fill=1)
     c.setFillColor(HexColor('#ffffff'))
     c.setFont(cheatsheetfont, 20)
     strwidth = pdfmetrics.stringWidth("ALβIREO", cheatsheetfont, 20)
     c.drawString(middle_x - 0.5 * strwidth, speaker_y + 12.5, "ALβIREO")
-    strwidth = pdfmetrics.stringWidth("GEN3", cheatsheetfont, 20)
+    c.setFont(cheatsheetfont, 18)
+    strwidth = pdfmetrics.stringWidth("GEN3", cheatsheetfont, 18)
     c.drawString(middle_x - 0.5 * strwidth, speaker_y - 12.5, "GEN3")
     renderPDF.draw(scaleSVG("SVG/star.svg", 0.15), c, middle_x - 12.0, speaker_y + 15)
     renderPDF.draw(scaleSVG("SVG/arc_330_30degouter.svg",  beziers_scale), c, beziers_x, beziers_y)
