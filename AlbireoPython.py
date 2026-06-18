@@ -128,7 +128,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         albireo(c, 200, 200)
-        mizar(c, 400, 400)
+        mizar(c, 400, 800)
         c.showPage()
         c.save()
         print(f"✅ PDF CheatSheetAlbireo '{filename}' created successfully.")
