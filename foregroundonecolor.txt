@@ -1,0 +1,14 @@
+Don't say you're dumb, this operation takes a few steps that aren't the most intuitive.
+
+Here's how I would do it:
+
+Choose the Color Select tool (Shift+O) and click somewhere transparent to select all of your transparency
+Invert your selection with Ctrl+I (or use the top toolbar for Select -> Invert)
+Click your foreground color swatch to find the color you want for your single-color-filled object. (If the color you want is somewhere in your image, you can use your Color Picker tool (O) to click and get the color)
+Select your Bucket tool (Shift+B) and ensure that, in your Tool Options section, you have the Affected Area set to "Fill whole selection"
+Click in the object you want to fill
+
+
+On 6/26/2022 at 4:00 AM, JEtt said:
+Never mind, I've figured it out. all you need to do is use the magic wand and select the color, and on the top, click on flood mode and change it from continuous to global.
+OK, great answer. I was  just trying to figure out this very thing. Put it into search and after a lot of entrys  Tada!, Here you and your answer are. Brilliant
