@@ -53,7 +53,8 @@ def drawroundRect(c, x, y, w, h, a, color):
 
 def mizar(c, x, y):
     renderPDF.draw(scaleSVG("SVG/mizar0.svg", 0.5), c, x, y)
-    renderPDF.draw(scaleSVG("SVG/mizar1.svg", 0.5), c, x, y)  
+    renderPDF.draw(scaleSVG("SVG/mizar1.svg", 0.5), c, x, y)
+    renderPDF.draw(scaleSVG("SVG/mizar2.svg", 0.5), c, x, y)  
       
 def albireo(c, x, y):
     bottom_margin = 8 
