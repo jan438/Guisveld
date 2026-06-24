@@ -50,6 +50,9 @@ def drawroundRect(c, x, y, w, h, a, color):
     p.arcTo(x, y + h, x + a, y + h + a, startAng = 90, extent = 90)
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
+
+def mizar(c, x, y):
+    renderPDF.draw(scaleSVG("SVG/mizar0.svg", 0.15), c, x, y)  
       
 def albireo(c, x, y):
     bottom_margin = 8 
@@ -125,6 +128,7 @@ def create_CheatSheetAlbireo(filename, ps, pagesize, title="Cheat Sheet Albireo"
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         albireo(c, 200, 200)
+        mizar(c, 400, 800)
         c.showPage()
         c.save()
         print(f"✅ PDF CheatSheetAlbireo '{filename}' created successfully.")
